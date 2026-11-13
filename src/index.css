@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom leaflet map adjustments for luxury dark/gold theme */
+.leaflet-popup-content-wrapper {
+  background: #1C1917 !important;
+  color: #FAF8F5 !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(197, 168, 128, 0.3) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+  background: #1C1917 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Hide default leaflet attribution flag prefix clutter while retaining legal attribution */
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(250, 248, 245, 0.85) !important;
+  border-radius: 4px !important;
+}

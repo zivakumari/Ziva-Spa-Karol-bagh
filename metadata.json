@@ -1,0 +1,6 @@
+{
+  "name": "ZIVA SPA – Luxury Spa & Wellness Sanctuary",
+  "description": "Premier luxury spa & wellness sanctuary in Karol Bagh, New Delhi. Experience massage therapies, body spa treatments, couples rituals, and online booking.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
