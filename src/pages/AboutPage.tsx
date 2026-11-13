@@ -60,7 +60,7 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="rounded-3xl overflow-hidden shadow-xl border border-stone-200">
               <img
-                src="/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
+                src="/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
                 alt="ZIVA SPA Relaxation Sanctuary"
                 className="w-full h-[450px] object-cover"
                 referrerPolicy="no-referrer"
@@ -142,7 +142,7 @@ export const AboutPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-xl border border-stone-200">
             <img
-              src="/src/assets/images/couple_spa_suite_1794307113115.jpg"
+              src="/images/couple_spa_suite_1794307113115.jpg"
               alt="ZIVA SPA Private Suite"
               className="w-full h-[420px] object-cover"
               referrerPolicy="no-referrer"

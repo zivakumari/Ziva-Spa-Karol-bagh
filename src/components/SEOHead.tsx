@@ -18,7 +18,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   keywords,
   canonicalPath,
   ogType = 'website',
-  ogImage = '/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
+  ogImage = '/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
   structuredData,
 }) => {
   const location = useLocation();
@@ -102,9 +102,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       name: 'Ziva Spa – Open 24/7',
       alternateName: ['Ziva Spa New Delhi', 'Ziva Spa Karol Bagh', 'Ziva Luxury Wellness Sanctuary'],
       image: [
-        'https://zivaspa.in/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
-        'https://zivaspa.in/src/assets/images/spa_interior_reception_1794307114314.jpg',
-        'https://zivaspa.in/src/assets/images/couple_spa_suite_1794307113115.jpg',
+        'https://zivaspa.in/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
+        'https://zivaspa.in/images/spa_interior_reception_1794307114314.jpg',
+        'https://zivaspa.in/images/couple_spa_suite_1794307113115.jpg',
       ],
       url: 'https://zivaspa.in',
       telephone: BUSINESS_INFO.phonePrimary,

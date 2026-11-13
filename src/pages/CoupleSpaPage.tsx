@@ -19,7 +19,7 @@ export const CoupleSpaPage: React.FC = () => {
       <section className="relative py-24 bg-[#141211] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/couple_spa_suite_1794307113115.jpg"
+            src="/images/couple_spa_suite_1794307113115.jpg"
             alt="Private Couple Spa Suite"
             className="w-full h-full object-cover opacity-35"
             referrerPolicy="no-referrer"
@@ -89,7 +89,7 @@ export const CoupleSpaPage: React.FC = () => {
 
           <div className="lg:col-span-6 rounded-3xl overflow-hidden shadow-xl border border-stone-200">
             <img
-              src="/src/assets/images/couple_spa_suite_1794307113115.jpg"
+              src="/images/couple_spa_suite_1794307113115.jpg"
               alt="Romantic Couple Treatment Suite with Rose Petals"
               className="w-full h-[440px] object-cover"
               referrerPolicy="no-referrer"

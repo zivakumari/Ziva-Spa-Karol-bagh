@@ -23,7 +23,7 @@ export const HomePage: React.FC = () => {
         {/* Background Hero Image with Measured Scrim */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
+            src="/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
             alt="ZIVA SPA Luxury Wellness Sanctuary Interior"
             className="w-full h-full object-cover object-center scale-105 animate-in fade-in zoom-in-95 duration-1000 opacity-55"
             referrerPolicy="no-referrer"
@@ -154,7 +154,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden shadow-md group">
               <img
-                src="/src/assets/images/spa_interior_reception_1794307114314.jpg"
+                src="/images/spa_interior_reception_1794307114314.jpg"
                 alt="ZIVA SPA Reception Lounge"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -167,7 +167,7 @@ export const HomePage: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-md group sm:translate-y-6">
               <img
-                src="/src/assets/images/couple_spa_suite_1794307113115.jpg"
+                src="/images/couple_spa_suite_1794307113115.jpg"
                 alt="Couple Treatment Suite"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -329,7 +329,7 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-6 relative">
               <div className="rounded-3xl overflow-hidden border border-stone-800 shadow-2xl">
                 <img
-                  src="/src/assets/images/couple_spa_suite_1794307113115.jpg"
+                  src="/images/couple_spa_suite_1794307113115.jpg"
                   alt="Couple Spa Suite at ZIVA SPA Karol Bagh New Delhi"
                   className="w-full h-[400px] sm:h-[460px] object-cover"
                   referrerPolicy="no-referrer"

@@ -35,7 +35,7 @@ export const BodySpaPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-stone-200/90 shadow-xs">
           <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-md">
             <img
-              src="/src/assets/images/body_treatment_herbal_scrub_1794307112654.jpg"
+              src="/images/body_treatment_herbal_scrub_1794307112654.jpg"
               alt="Body Scrub & Herbal Preparations"
               className="w-full h-[360px] sm:h-[420px] object-cover"
               referrerPolicy="no-referrer"

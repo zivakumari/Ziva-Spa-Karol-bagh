@@ -48,7 +48,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 60,
     priceINR: 2799,
     originalPriceINR: 3499,
-    image: '/src/assets/images/service_swedish_massage_1794309941515.jpg',
+    image: '/images/service_swedish_massage_1794309941515.jpg',
     rating: 4.9,
     reviewCount: 142,
     benefits: [
@@ -77,7 +77,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 75,
     priceINR: 3499,
     originalPriceINR: 4299,
-    image: '/src/assets/images/service_deep_tissue_1794309940666.jpg',
+    image: '/images/service_deep_tissue_1794309940666.jpg',
     rating: 4.95,
     reviewCount: 118,
     benefits: [
@@ -106,7 +106,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 90,
     priceINR: 4299,
     originalPriceINR: 5299,
-    image: '/src/assets/images/massage_therapy_stone_1794307112636.jpg',
+    image: '/images/massage_therapy_stone_1794307112636.jpg',
     rating: 4.98,
     reviewCount: 96,
     benefits: [
@@ -135,7 +135,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 60,
     priceINR: 2999,
     originalPriceINR: 3799,
-    image: '/src/assets/images/service_balinese_massage_1794309942521.jpg',
+    image: '/images/service_balinese_massage_1794309942521.jpg',
     rating: 4.88,
     reviewCount: 84,
     benefits: [
@@ -164,7 +164,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 75,
     priceINR: 3699,
     originalPriceINR: 4599,
-    image: '/src/assets/images/service_ayurvedic_potli_1794309944073.jpg',
+    image: '/images/service_ayurvedic_potli_1794309944073.jpg',
     rating: 4.92,
     reviewCount: 76,
     benefits: [
@@ -193,7 +193,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 45,
     priceINR: 1999,
     originalPriceINR: 2499,
-    image: '/src/assets/images/service_foot_reflexology_1794309943632.jpg',
+    image: '/images/service_foot_reflexology_1794309943632.jpg',
     rating: 4.89,
     reviewCount: 92,
     benefits: [
@@ -221,7 +221,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 60,
     priceINR: 3499,
     originalPriceINR: 4399,
-    image: '/src/assets/images/service_turkish_hamam_1794309945278.jpg',
+    image: '/images/service_turkish_hamam_1794309945278.jpg',
     rating: 4.94,
     reviewCount: 68,
     benefits: [
@@ -250,7 +250,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 60,
     priceINR: 3299,
     originalPriceINR: 3999,
-    image: '/src/assets/images/service_himalayan_salt_scrub_1794309944951.jpg',
+    image: '/images/service_himalayan_salt_scrub_1794309944951.jpg',
     rating: 4.91,
     reviewCount: 54,
     benefits: [
@@ -279,7 +279,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 75,
     priceINR: 3999,
     originalPriceINR: 4999,
-    image: '/src/assets/images/service_detox_clay_wrap_1794309946662.jpg',
+    image: '/images/service_detox_clay_wrap_1794309946662.jpg',
     rating: 4.87,
     reviewCount: 43,
     benefits: [
@@ -308,7 +308,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 120,
     priceINR: 6999,
     originalPriceINR: 8999,
-    image: '/src/assets/images/couple_spa_suite_1794307113115.jpg',
+    image: '/images/couple_spa_suite_1794307113115.jpg',
     rating: 4.99,
     reviewCount: 167,
     benefits: [
@@ -337,7 +337,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 150,
     priceINR: 8999,
     originalPriceINR: 11499,
-    image: '/src/assets/images/service_couple_twilight_jacuzzi_1794309945986.jpg',
+    image: '/images/service_couple_twilight_jacuzzi_1794309945986.jpg',
     rating: 4.97,
     reviewCount: 98,
     benefits: [
@@ -366,7 +366,7 @@ export const SPA_SERVICES: SpaService[] = [
     durationMinutes: 60,
     priceINR: 3799,
     originalPriceINR: 4799,
-    image: '/src/assets/images/service_gold_radiance_facial_1794309946623.jpg',
+    image: '/images/service_gold_radiance_facial_1794309946623.jpg',
     rating: 4.93,
     reviewCount: 88,
     benefits: [
@@ -396,7 +396,7 @@ export const SPA_PACKAGES: SpaPackage[] = [
     durationMinutes: 180,
     priceINR: 7499,
     originalPriceINR: 9999,
-    image: '/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
+    image: '/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
     includedServices: [
       'Welcome Aromatic Foot Ritual & Herbal Tisane',
       '60-Min Traditional Balinese or Swedish Massage',
@@ -419,7 +419,7 @@ export const SPA_PACKAGES: SpaPackage[] = [
     durationMinutes: 120,
     priceINR: 4999,
     originalPriceINR: 6499,
-    image: '/src/assets/images/package_executive_detox_1794309948494.jpg',
+    image: '/images/package_executive_detox_1794309948494.jpg',
     includedServices: [
       '75-Min Deep Tissue Muscle Decompression with Arnica',
       '30-Min Targeted Cervical Spine & Scalp Acupressure',
@@ -439,7 +439,7 @@ export const SPA_PACKAGES: SpaPackage[] = [
     durationMinutes: 210,
     priceINR: 8999,
     originalPriceINR: 11999,
-    image: '/src/assets/images/package_bridal_radiance_1794309947842.jpg',
+    image: '/images/package_bridal_radiance_1794309947842.jpg',
     includedServices: [
       '60-Min Kessa Olive Silk Body Scrub & Rose Hydration',
       '60-Min Pure Aromatic Oil Swedish Massage',
@@ -460,7 +460,7 @@ export const SPA_PACKAGES: SpaPackage[] = [
     durationMinutes: 150,
     priceINR: 9499,
     originalPriceINR: 12499,
-    image: '/src/assets/images/service_couple_twilight_jacuzzi_1794309945986.jpg',
+    image: '/images/service_couple_twilight_jacuzzi_1794309945986.jpg',
     includedServices: [
       '75-Min Hot Stone or Warm Balinese Couple Massage',
       '30-Min Honey & Almond Couple Body Exfoliation',
@@ -491,7 +491,7 @@ export const SPECIAL_OFFERS: SpecialOffer[] = [
       'Cannot be combined with pre-discounted packages',
       'Advance appointment booking recommended',
     ],
-    image: '/src/assets/images/service_swedish_massage_1794309941515.jpg',
+    image: '/images/service_swedish_massage_1794309941515.jpg',
   },
   {
     id: 'weekday-happy-hours',
@@ -506,7 +506,7 @@ export const SPECIAL_OFFERS: SpecialOffer[] = [
       'Appointment must start between 11:00 AM and 3:00 PM',
       'Includes complimentary 15-min foot reflexology add-on',
     ],
-    image: '/src/assets/images/service_foot_reflexology_1794309943632.jpg',
+    image: '/images/service_foot_reflexology_1794309943632.jpg',
   },
   {
     id: 'couple-weekday-bliss',
@@ -521,7 +521,7 @@ export const SPECIAL_OFFERS: SpecialOffer[] = [
       'Includes private suite with Jacuzzi',
       'Complimentary chocolate platter included',
     ],
-    image: '/src/assets/images/couple_spa_suite_1794307113115.jpg',
+    image: '/images/couple_spa_suite_1794307113115.jpg',
   },
   {
     id: 'corporate-wellness-delhi',
@@ -535,7 +535,7 @@ export const SPECIAL_OFFERS: SpecialOffer[] = [
       'Applicable to individual employee and immediate family',
       'Priority weekend booking slots available',
     ],
-    image: '/src/assets/images/package_executive_detox_1794309948494.jpg',
+    image: '/images/package_executive_detox_1794309948494.jpg',
   },
 ];
 
@@ -607,56 +607,56 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'gal-1',
     title: 'Main Relaxation Lounge & Water Feature',
     category: 'interiors',
-    imageUrl: '/src/assets/images/spa_interior_reception_1794307114314.jpg',
+    imageUrl: '/images/spa_interior_reception_1794307114314.jpg',
     description: 'Warm travertine architecture, soothing indoor water fountain, and minimalist seating welcoming guests to serenity.',
   },
   {
     id: 'gal-2',
     title: 'Luxury Hydro-Sanctuary & Teak Loungers',
     category: 'relaxation',
-    imageUrl: '/src/assets/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
+    imageUrl: '/images/hero_luxury_spa_sanctuary_1794307111404.jpg',
     description: 'Tranquil hydro-pool lounge with arched garden windows, flickering candles, and organic linen loungers.',
   },
   {
     id: 'gal-3',
     title: 'Heated Basalt Stone Therapy Session',
     category: 'massage',
-    imageUrl: '/src/assets/images/massage_therapy_stone_1794307112636.jpg',
+    imageUrl: '/images/massage_therapy_stone_1794307112636.jpg',
     description: 'Therapist performing geothermal stone alignment on back meridians using warm pure almond oil.',
   },
   {
     id: 'gal-4',
     title: 'Botanical Herb & Rose Petal Preparations',
     category: 'treatments',
-    imageUrl: '/src/assets/images/body_treatment_herbal_scrub_1794307112654.jpg',
+    imageUrl: '/images/body_treatment_herbal_scrub_1794307112654.jpg',
     description: 'Handcrafted brass vessels with organic floral essences, frangipani blossoms, and mineral body scrubs.',
   },
   {
     id: 'gal-5',
     title: 'VIP Private Couple Treatment Suite',
     category: 'couple',
-    imageUrl: '/src/assets/images/couple_spa_suite_1794307113115.jpg',
+    imageUrl: '/images/couple_spa_suite_1794307113115.jpg',
     description: 'Side-by-side plush massage tables adorned with fresh rose petals, soft lanterns, and private Jacuzzi.',
   },
   {
     id: 'gal-6',
     title: 'Royal Turkish Hamam & Olive Soap Ritual',
     category: 'treatments',
-    imageUrl: '/src/assets/images/service_turkish_hamam_1794309945278.jpg',
+    imageUrl: '/images/service_turkish_hamam_1794309945278.jpg',
     description: 'Heated marble slab exfoliation with traditional Moroccan black olive soap and natural Kessa silk mitt.',
   },
   {
     id: 'gal-7',
     title: '24K Pure Gold Cellular Facial',
     category: 'treatments',
-    imageUrl: '/src/assets/images/service_gold_radiance_facial_1794309946623.jpg',
+    imageUrl: '/images/service_gold_radiance_facial_1794309946623.jpg',
     description: 'Pure biological 24K gold foil leaves applied over firming hyaluronic acid serums with chilled jade rollers.',
   },
   {
     id: 'gal-8',
     title: 'Ayurvedic Marma Potli Decompression',
     category: 'massage',
-    imageUrl: '/src/assets/images/service_ayurvedic_potli_1794309944073.jpg',
+    imageUrl: '/images/service_ayurvedic_potli_1794309944073.jpg',
     description: 'Hand-tied organic herbal poultices steeped in Dhanwantharam warm oil gently tapped along spinal meridians.',
   },
 ];

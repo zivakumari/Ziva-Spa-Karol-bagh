@@ -80,6 +80,12 @@ export const ZivaLogo: React.FC<ZivaLogoProps> = ({
           style={{ aspectRatio: '1 / 1' }}
           loading="eager"
           decoding="async"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.src.endsWith('/ziva_spa_logo_circle.png')) {
+              target.src = '/ziva_spa_logo_circle.png';
+            }
+          }}
         />
       </div>
 
