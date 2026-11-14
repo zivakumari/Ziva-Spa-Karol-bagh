@@ -33,7 +33,7 @@ export const CoupleSpaPage: React.FC = () => {
             <span>Private Sanctuary for Two · New Delhi</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-2 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-2 text-stone-100">
             Couple Spa Retreats
           </h1>
           <p className="mt-4 text-stone-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">

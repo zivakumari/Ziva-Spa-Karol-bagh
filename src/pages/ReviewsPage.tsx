@@ -59,7 +59,7 @@ export const ReviewsPage: React.FC = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Guest Testimonials
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Reviews & Testimonials
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -190,7 +190,7 @@ export const ReviewsPage: React.FC = () => {
       {/* Add Review Modal */}
       {showAddReviewModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-white rounded-3xl max-w-lg w-full border border-stone-200 shadow-2xl p-6 sm:p-8 relative">
+          <div className="bg-white rounded-3xl max-w-lg w-full border border-stone-200 shadow-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
             <h3 className="font-serif text-2xl font-bold text-[#1C1917]">
               Share Your ZIVA Experience
             </h3>

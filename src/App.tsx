@@ -42,7 +42,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1C1917]">
+      <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1C1917] overflow-x-hidden w-full relative">
         <Navbar />
         <main className="flex-1">
           <Routes>

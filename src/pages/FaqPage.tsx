@@ -58,7 +58,7 @@ export const FaqPage: React.FC = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Help & Guidance
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Frequently Asked Questions
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -145,7 +145,7 @@ export const FaqPage: React.FC = () => {
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href={`tel:${BUSINESS_INFO.phonePrimary}`}
+              href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
               className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1C1917] text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
@@ -153,13 +153,13 @@ export const FaqPage: React.FC = () => {
             </a>
 
             <a
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA,%20I%20have%20an%20inquiry.`}
+              href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-stone-800 text-xs font-semibold uppercase tracking-wider hover:bg-stone-100 transition-colors border border-stone-300"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
-              <span>WhatsApp Us</span>
+              <span>WhatsApp Us ({BUSINESS_INFO.whatsappDisplay})</span>
             </a>
           </div>
         </div>

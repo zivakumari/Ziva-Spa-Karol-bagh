@@ -37,7 +37,7 @@ export const GalleryPage: React.FC = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Visual Sanctuary Tour
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Sanctuary Gallery
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -48,7 +48,7 @@ export const GalleryPage: React.FC = () => {
 
       {/* Filter Tabs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="flex items-center justify-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none px-1">
           {tabs.map((tab) => (
             <button
               key={tab.id}

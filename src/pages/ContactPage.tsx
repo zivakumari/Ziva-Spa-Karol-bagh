@@ -47,7 +47,7 @@ export const ContactPage: React.FC = () => {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>Ziva Spa – Open 24/7</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-100">
             Contact & Location Sanctuary
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -78,11 +78,11 @@ export const ContactPage: React.FC = () => {
             </div>
             <h3 className="font-serif font-bold text-lg text-[#1C1917]">24/7 Phone Concierge</h3>
             <div className="text-xs text-stone-600 space-y-1">
-              <a href={`tel:${BUSINESS_INFO.phonePrimary}`} className="block hover:text-[#A88B63] transition-colors">
-                Primary: {BUSINESS_INFO.phonePrimary}
+              <a href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`} className="block hover:text-[#A88B63] transition-colors font-medium">
+                Direct Helpline: {BUSINESS_INFO.phonePrimary}
               </a>
-              <a href={`tel:${BUSINESS_INFO.phoneSecondary}`} className="block hover:text-[#A88B63] transition-colors">
-                Desk: {BUSINESS_INFO.phoneSecondary}
+              <a href={BUSINESS_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" className="block text-emerald-700 hover:text-emerald-800 transition-colors">
+                WhatsApp: {BUSINESS_INFO.whatsappDisplay}
               </a>
             </div>
             <p className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
@@ -98,15 +98,15 @@ export const ContactPage: React.FC = () => {
             </div>
             <h3 className="font-serif font-bold text-lg text-[#1C1917]">WhatsApp Concierge</h3>
             <p className="text-xs text-stone-600 leading-relaxed">
-              Message us for instantaneous appointment verification, direction assistance, or gift vouchers.
+              Message us for instantaneous appointment verification, direction assistance, or treatment details.
             </p>
             <a
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA`}
+              href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:underline"
             >
-              <span>Chat on WhatsApp (24/7) →</span>
+              <span>Chat on WhatsApp: {BUSINESS_INFO.whatsappDisplay} →</span>
             </a>
           </div>
 
@@ -152,7 +152,7 @@ export const ContactPage: React.FC = () => {
 
       {/* Interactive Contact Form */}
       <section className="max-w-4xl mx-auto px-4 sm:px-8">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200/90 shadow-xs space-y-6">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-stone-200/90 shadow-xs space-y-6">
           <div className="text-center space-y-2">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#A88B63]">
               Write to Our Concierge

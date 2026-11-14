@@ -19,7 +19,7 @@ export const LuxuryPackagesPage: React.FC = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Comprehensive Immersion
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Luxury Spa Packages
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -140,7 +140,7 @@ export const LuxuryPackagesPage: React.FC = () => {
 
           <div className="flex items-center gap-4 shrink-0">
             <a
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA,%20I%20would%20like%20to%20order%20a%20Spa%20Gift%20Voucher.`}
+              href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20Ziva%20Spa,%20I%20would%20like%20to%20order%20a%20Spa%20Gift%20Voucher.`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 rounded-xl bg-[#C5A880] text-[#1C1917] text-xs font-semibold uppercase tracking-wider hover:bg-[#DFCA9B] transition-colors"

@@ -91,8 +91,8 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C5A880] shrink-0" />
-                <a href={`tel:${BUSINESS_INFO.phonePrimary}`} className="hover:text-white transition-colors">
-                  {BUSINESS_INFO.phonePrimary} / {BUSINESS_INFO.phoneSecondary} (24/7 Desk)
+                <a href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
+                  {BUSINESS_INFO.phonePrimary} (24/7 Helpline)
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
@@ -105,13 +105,13 @@ export const Footer: React.FC = () => {
 
             <div className="flex items-center gap-3 pt-2 flex-wrap">
               <a
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA,%20I%20would%20like%20to%20know%20more.`}
+                href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-800 text-emerald-400 text-xs font-semibold hover:bg-emerald-900/80 transition-colors"
               >
                 <MessageSquare className="w-3.5 h-3.5" />
-                <span>WhatsApp 24/7</span>
+                <span>WhatsApp 24/7 ({BUSINESS_INFO.whatsappDisplay})</span>
               </a>
 
               <GetDirectionsButton
@@ -228,12 +228,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Lower Legal & Copyright Strip */}
-        <div className="mt-14 pt-8 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="mt-12 sm:mt-14 pt-8 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} ZIVA SPA. All rights reserved. Registered Spa & Wellness Center.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
             <Link to="/privacy-policy" className="hover:text-stone-300 transition-colors">
               Privacy Policy
             </Link>

@@ -187,7 +187,7 @@ export const BookingPage: React.FC = () => {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>Ziva Spa – Open 24/7 · Day & Night Sessions</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-100">
             Book an Appointment
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -298,13 +298,13 @@ export const BookingPage: React.FC = () => {
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-900 block mb-2">
                   4. Preferred Time Slot * (Spa Open: 10:00 AM – 9:30 PM)
                 </label>
-                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                   {TIME_SLOTS.map((slot) => (
                     <button
                       type="button"
                       key={slot}
                       onClick={() => setTimeSlot(slot)}
-                      className={`py-2.5 rounded-xl text-xs font-medium transition-colors border ${
+                      className={`py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-medium transition-colors border text-center ${
                         timeSlot === slot
                           ? 'bg-[#C5A880] text-[#1C1917] font-bold border-[#C5A880] shadow-xs'
                           : 'bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, Star, Search, ArrowRight, Sparkles, Filter } from 'lucide-react';
-import { SPA_SERVICES } from '../data/spaData';
+import { SPA_SERVICES, BUSINESS_INFO } from '../data/spaData';
 import { SpaService } from '../types';
 import { SEOHead } from '../components/SEOHead';
 
@@ -40,7 +40,7 @@ export const ServicesPage: React.FC = () => {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             The Treatment Catalogue
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Our Spa & Wellness Menu
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -208,10 +208,10 @@ export const ServicesPage: React.FC = () => {
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+919818054321"
+              href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
               className="px-6 py-3 rounded-xl bg-[#1C1917] text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-colors"
             >
-              Call Concierge: +91 98180 54321
+              Call Concierge: {BUSINESS_INFO.phonePrimary}
             </a>
             <Link
               to="/contact"

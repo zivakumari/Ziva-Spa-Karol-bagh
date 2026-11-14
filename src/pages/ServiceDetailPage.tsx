@@ -214,7 +214,7 @@ export const ServiceDetailPage: React.FC = () => {
                     className="w-full text-xs py-2.5"
                   />
                   <a
-                    href={`tel:${BUSINESS_INFO.phonePrimary}`}
+                    href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
                     className="flex items-center justify-center gap-1.5 w-full py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-semibold transition-colors border border-stone-200"
                   >
                     <span>24/7 Call Desk</span>

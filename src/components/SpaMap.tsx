@@ -348,7 +348,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
       )}
 
       {/* View Switcher Bar */}
-      <div className="bg-stone-100/70 px-5 py-2.5 border-b border-stone-200/70 flex items-center justify-between text-xs">
+      <div className="bg-stone-100/70 px-4 sm:px-5 py-2.5 border-b border-stone-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs">
         <div className="flex items-center gap-1.5">
           <button
             onClick={() => setMapType('google-embed')}
@@ -454,7 +454,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>
                 <strong>24-Hour Helpdesk:</strong> For turn-by-turn navigation guidance, call our 24/7 concierge at{' '}
-                <a href={`tel:${BUSINESS_INFO.phonePrimary}`} className="text-[#A88B63] font-semibold hover:underline">
+                <a href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`} className="text-[#A88B63] font-semibold hover:underline">
                   {BUSINESS_INFO.phonePrimary}
                 </a>
               </span>

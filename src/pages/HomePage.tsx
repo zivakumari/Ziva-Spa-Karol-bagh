@@ -45,7 +45,7 @@ export const HomePage: React.FC = () => {
             <span className="text-stone-300 font-medium">Opposite Gaffar Market, Karol Bagh</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-normal tracking-tight text-[#FAF8F5] max-w-4xl leading-[1.1] text-balance">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-[#FAF8F5] max-w-4xl leading-[1.15] text-balance">
             Where Modern Chaos Yields to <span className="italic text-[#C5A880] font-light">Timeless Serenity</span>
           </h1>
 
@@ -486,7 +486,7 @@ export const HomePage: React.FC = () => {
               className="px-6 py-4 text-xs font-semibold"
             />
             <a
-              href={`tel:${BUSINESS_INFO.phonePrimary}`}
+              href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
               className="flex items-center gap-2 px-6 py-4 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs font-semibold tracking-wider transition-colors border border-stone-700"
             >
               <Phone className="w-3.5 h-3.5 text-[#C5A880]" />

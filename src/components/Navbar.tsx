@@ -70,22 +70,23 @@ export const Navbar: React.FC = () => {
             />
 
             <a
-              href={`tel:${BUSINESS_INFO.phonePrimary}`}
+              href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
               className="flex items-center gap-1.5 text-stone-200 hover:text-[#C5A880] transition-colors"
               title="24/7 Spa Concierge Desk"
             >
               <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
               <span className="hidden sm:inline font-mono text-[11px]">{BUSINESS_INFO.phonePrimary}</span>
-              <span className="sm:hidden text-[11px]">24/7 Call</span>
+              <span className="sm:hidden text-[11px] font-mono">{BUSINESS_INFO.phonePrimary}</span>
             </a>
 
             <span className="text-stone-700 hidden sm:inline">|</span>
 
             <a
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20therapy.`}
+              href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors"
+              title="Chat on WhatsApp 24/7"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
@@ -172,9 +173,30 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF8F5] border-b border-stone-200 px-6 py-6 shadow-xl animate-in slide-in-from-top-2 duration-200 max-h-[85vh] overflow-y-auto">
+      {/* Mobile Navigation Drawer with Smooth Backdrop */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden flex flex-col justify-start">
+          {/* Backdrop overlay */}
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity animate-in fade-in duration-200"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Drawer Sheet */}
+          <div className="relative z-10 bg-[#FAF8F5] border-b border-stone-200 px-5 sm:px-8 py-6 shadow-2xl animate-in slide-in-from-top-2 duration-300 max-h-[90vh] overflow-y-auto">
+            {/* Header row in mobile menu */}
+            <div className="flex items-center justify-between pb-4 border-b border-stone-200 mb-4">
+              <ZivaLogo variant="dark" size="sm" show247Badge={true} />
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+                className="p-2 -mr-2 text-stone-600 hover:text-stone-900 rounded-lg hover:bg-stone-200/60 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
             {/* Prominent Mobile 24/7 Banner */}
             <div className="p-4 rounded-2xl bg-[#1C1917] text-white mb-5 space-y-2 border border-stone-800 shadow-md">
               <div className="flex items-center justify-between">
@@ -191,12 +213,12 @@ export const Navbar: React.FC = () => {
                 <GetDirectionsButton
                   variant="luxury-gold"
                   label="Navigate with Google Maps"
-                  className="w-full text-xs py-2"
+                  className="w-full text-xs py-2.5 justify-center"
                 />
               </div>
             </div>
 
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-1.5">
               <span className="text-[10px] font-semibold uppercase tracking-widest text-[#A88B63] px-3">
                 Main Menu
               </span>
@@ -205,9 +227,9 @@ export const Navbar: React.FC = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`px-3 py-2.5 rounded-xl text-sm font-medium transition-colors min-h-[44px] flex items-center ${
                     isActive(link.path)
-                      ? 'bg-[#C5A880]/15 text-[#1C1917] font-semibold'
+                      ? 'bg-[#C5A880]/20 text-[#1C1917] font-semibold'
                       : 'text-stone-700 hover:bg-stone-100 hover:text-stone-900'
                   }`}
                 >
@@ -225,33 +247,34 @@ export const Navbar: React.FC = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 transition-colors"
+                  className="px-3 py-2 text-xs text-stone-600 hover:text-stone-900 transition-colors min-h-[38px] flex items-center"
                 >
                   {link.label}
                 </Link>
               ))}
 
-              <div className="mt-4 pt-4 border-t border-stone-200 flex flex-col gap-2">
+              <div className="mt-4 pt-4 border-t border-stone-200 flex flex-col gap-2.5">
                 <a
-                  href={`tel:${BUSINESS_INFO.phonePrimary}`}
-                  className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-xs font-semibold text-stone-900 transition-colors"
+                  href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
+                  className="flex items-center gap-2.5 px-3.5 py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-xs font-semibold text-stone-900 transition-colors min-h-[44px]"
                 >
                   <Phone className="w-4 h-4 text-[#C5A880]" />
-                  <span>Call 24/7 Desk: {BUSINESS_INFO.phonePrimary}</span>
+                  <span>Call 24/7 Helpline: {BUSINESS_INFO.phonePrimary}</span>
                 </a>
                 <a
-                  href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20ZIVA%20SPA,%20I%20would%20like%20to%20book%20a%20session.`}
+                  href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-xs font-semibold text-emerald-800 transition-colors"
+                  className="flex items-center gap-2.5 px-3.5 py-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-xs font-semibold text-emerald-800 transition-colors min-h-[44px]"
                 >
                   <MessageSquare className="w-4 h-4 text-emerald-600" />
-                  <span>WhatsApp 24/7 Concierge</span>
+                  <span>WhatsApp 24/7 ({BUSINESS_INFO.whatsappDisplay})</span>
                 </a>
               </div>
             </div>
           </div>
-        )}
+        </div>
+      )}
       </header>
     </>
   );
