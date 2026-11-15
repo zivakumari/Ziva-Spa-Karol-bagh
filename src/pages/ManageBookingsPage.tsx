@@ -56,7 +56,7 @@ export const ManageBookingsPage: React.FC = () => {
         canonicalPath="/my-bookings"
       />
       {/* Header Banner */}
-      <section className="py-20 bg-[#1C1917] text-white text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Appointments Portal
@@ -64,7 +64,7 @@ export const ManageBookingsPage: React.FC = () => {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
             Booking Management
           </h1>
-          <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-stone-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Search, view, reschedule, or manage your upcoming ZIVA SPA appointments using your booking reference or registered mobile number.
           </p>
         </div>
@@ -72,7 +72,7 @@ export const ManageBookingsPage: React.FC = () => {
 
       {/* Search Bar Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-white p-4 sm:p-6 rounded-3xl border border-stone-200/90 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="relative w-full sm:w-96">
             <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
@@ -104,7 +104,7 @@ export const ManageBookingsPage: React.FC = () => {
             {filteredBookings.map((b) => (
               <div
                 key={b.id}
-                className="bg-white rounded-3xl border border-stone-200/90 p-6 sm:p-8 shadow-xs hover:shadow-md transition-shadow space-y-6"
+                className="bg-white rounded-3xl border border-stone-200/90 p-5 sm:p-7 md:p-8 shadow-xs hover:shadow-md transition-shadow space-y-6"
               >
                 {/* Header row */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 pb-4">
@@ -133,7 +133,7 @@ export const ManageBookingsPage: React.FC = () => {
                 </div>
 
                 {/* Details grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-xs">
                   <div>
                     <span className="text-[10px] text-stone-400 uppercase tracking-wider block mb-0.5">
                       Reserved Service
@@ -231,11 +231,11 @@ export const ManageBookingsPage: React.FC = () => {
                 )}
 
                 {/* Actions Bar */}
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-stone-100">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-stone-100">
+                  <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                     <button
                       onClick={() => setSelectedBookingForPass(b)}
-                      className="px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium flex items-center gap-1.5 transition-colors"
+                      className="flex-1 sm:flex-none justify-center px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium flex items-center gap-1.5 transition-colors"
                     >
                       <Printer className="w-3.5 h-3.5" />
                       <span>View Pass</span>
@@ -245,7 +245,7 @@ export const ManageBookingsPage: React.FC = () => {
                       href={BUSINESS_INFO.googleMapsDirectionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium flex items-center gap-1.5 transition-colors"
+                      className="flex-1 sm:flex-none justify-center px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium flex items-center gap-1.5 transition-colors"
                     >
                       <Navigation className="w-3.5 h-3.5 text-[#C5A880]" />
                       <span>Directions</span>
@@ -253,20 +253,20 @@ export const ManageBookingsPage: React.FC = () => {
                   </div>
 
                   {b.status !== 'Cancelled' && (
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                       <button
                         onClick={() => {
                           setReschedulingId(b.id);
                           setNewDate(b.appointmentDate);
                           setNewSlot(b.timeSlot);
                         }}
-                        className="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-stone-700 text-xs font-medium transition-colors"
+                        className="flex-1 sm:flex-none justify-center px-3.5 py-2 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-stone-700 text-xs font-medium transition-colors"
                       >
                         Reschedule
                       </button>
                       <button
                         onClick={() => handleCancelBooking(b.id)}
-                        className="px-3.5 py-2 rounded-xl bg-white hover:bg-red-50 border border-stone-200 text-red-600 text-xs font-medium transition-colors"
+                        className="flex-1 sm:flex-none justify-center px-3.5 py-2 rounded-xl bg-white hover:bg-red-50 border border-stone-200 text-red-600 text-xs font-medium transition-colors"
                       >
                         Cancel Appointment
                       </button>

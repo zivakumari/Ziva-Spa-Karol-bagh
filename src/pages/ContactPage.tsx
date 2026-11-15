@@ -41,7 +41,7 @@ export const ContactPage: React.FC = () => {
         keywords="contact Ziva Spa, 24/7 spa New Delhi contact, spa address Karol Bagh New Delhi, spa near Gaffar Market phone number, directions to Ziva Spa"
       />
       {/* Header Banner */}
-      <section className="py-20 bg-[#1C1917] text-white text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-xs font-semibold mb-4">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -50,7 +50,7 @@ export const ContactPage: React.FC = () => {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-100">
             Contact & Location Sanctuary
           </h1>
-          <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-stone-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Conveniently situated on Arya Samaj Road opposite Gaffar Market, Karol Bagh, New Delhi. Open round the clock for walk-ins, phone reservations, and GPS directions.
           </p>
         </div>
@@ -58,9 +58,9 @@ export const ContactPage: React.FC = () => {
 
       {/* Contact Info Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Card 1: Address */}
-          <div className="bg-white p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
+          <div className="bg-white p-5 sm:p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
             <div className="w-10 h-10 rounded-xl bg-[#C5A880]/15 flex items-center justify-center text-[#A88B63]">
               <MapPin className="w-5 h-5" />
             </div>
@@ -72,7 +72,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Card 2: Phone */}
-          <div className="bg-white p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
+          <div className="bg-white p-5 sm:p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
             <div className="w-10 h-10 rounded-xl bg-[#C5A880]/15 flex items-center justify-center text-[#A88B63]">
               <Phone className="w-5 h-5" />
             </div>
@@ -92,7 +92,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Card 3: WhatsApp */}
-          <div className="bg-white p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
+          <div className="bg-white p-5 sm:p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
             <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700">
               <MessageSquare className="w-5 h-5" />
             </div>
@@ -111,7 +111,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Card 4: Hours */}
-          <div className="bg-white p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
+          <div className="bg-white p-5 sm:p-6 rounded-2xl border border-stone-200/90 shadow-xs space-y-3">
             <div className="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
               <Clock className="w-5 h-5" />
             </div>
@@ -132,7 +132,7 @@ export const ContactPage: React.FC = () => {
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A88B63]">
               Dynamic Location & Directions
             </span>
-            <h2 className="text-3xl font-serif text-[#1C1917] mt-1">
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#1C1917] mt-1">
               Find ZIVA SPA on Google Maps
             </h2>
             <p className="text-stone-600 text-xs sm:text-sm mt-1">
@@ -143,21 +143,21 @@ export const ContactPage: React.FC = () => {
           <GetDirectionsButton
             variant="luxury-gold"
             label="Get Directions from My Location"
-            className="text-xs sm:text-sm px-6 py-3"
+            className="text-xs sm:text-sm px-6 py-3 w-full sm:w-auto text-center justify-center"
           />
         </div>
 
-        <SpaMap showDirectionsPanel={true} heightClass="h-[460px] md:h-[540px]" />
+        <SpaMap showDirectionsPanel={true} heightClass="h-[380px] sm:h-[460px] md:h-[540px]" />
       </section>
 
       {/* Interactive Contact Form */}
       <section className="max-w-4xl mx-auto px-4 sm:px-8">
-        <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-stone-200/90 shadow-xs space-y-6">
+        <div className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 border border-stone-200/90 shadow-xs space-y-6">
           <div className="text-center space-y-2">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#A88B63]">
               Write to Our Concierge
             </span>
-            <h2 className="text-3xl font-serif text-[#1C1917]">
+            <h2 className="text-2xl sm:text-3xl font-serif text-[#1C1917]">
               Send an Inquiry or Message
             </h2>
             <p className="text-xs sm:text-sm text-stone-500 max-w-md mx-auto">
@@ -262,7 +262,7 @@ export const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-8 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm disabled:opacity-50"
                 >
                   {loading ? 'Transmitting...' : 'Send Message to Concierge'}
                 </button>

@@ -20,8 +20,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#141211] text-stone-300 border-t border-stone-800">
       {/* Upper Trust Strip */}
-      <div className="border-b border-stone-800/80 py-8 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-xs">
+      <div className="border-b border-stone-800/80 py-8 px-4 sm:px-6 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 text-xs">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-stone-900 border border-stone-800 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-5 h-5 text-[#C5A880]" />
@@ -68,15 +68,15 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Main Footer Directory */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
           {/* Column 1: Brand & Bio */}
-          <div className="lg:col-span-2 flex flex-col gap-5">
+          <div className="sm:col-span-2 lg:col-span-2 flex flex-col gap-5">
             <Link to="/" className="inline-block">
               <ZivaLogo variant="light" size="lg" show247Badge={true} />
             </Link>
 
-            <p className="text-stone-400 text-sm leading-relaxed max-w-sm">
+            <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
               ZIVA SPA is New Delhi's premier sanctuary for holistic wellness, therapeutic massage, and private couple retreats. Open 24/7 to restore balance to urban lives through timeless rituals, pure organic oils, and exceptional hospitality.
             </p>
 
@@ -103,21 +103,22 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 pt-2 flex-wrap">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full sm:w-auto flex-wrap">
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-800 text-emerald-400 text-xs font-semibold hover:bg-emerald-900/80 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-emerald-950/70 border border-emerald-800 text-emerald-400 text-xs font-semibold hover:bg-emerald-900/80 transition-colors w-full sm:w-auto text-center"
               >
-                <MessageSquare className="w-3.5 h-3.5" />
+                <MessageSquare className="w-3.5 h-3.5 shrink-0" />
                 <span>WhatsApp 24/7 ({BUSINESS_INFO.whatsappDisplay})</span>
               </a>
 
               <GetDirectionsButton
                 variant="luxury-gold"
                 label="Get Directions"
-                className="text-xs py-2 px-4"
+                className="text-xs py-2 px-4 w-full sm:w-auto justify-center"
+                wrapperClassName="w-full sm:w-auto"
               />
             </div>
           </div>

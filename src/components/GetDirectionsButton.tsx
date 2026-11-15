@@ -4,6 +4,7 @@ import { BUSINESS_INFO } from '../data/spaData';
 
 interface GetDirectionsButtonProps {
   className?: string;
+  wrapperClassName?: string;
   variant?: 'primary' | 'secondary' | 'luxury-gold' | 'outline' | 'compact';
   label?: string;
   showIcon?: boolean;
@@ -12,6 +13,7 @@ interface GetDirectionsButtonProps {
 
 export const GetDirectionsButton: React.FC<GetDirectionsButtonProps> = ({
   className = '',
+  wrapperClassName = '',
   variant = 'primary',
   label = 'Get Directions',
   showIcon = true,
@@ -90,7 +92,7 @@ export const GetDirectionsButton: React.FC<GetDirectionsButtonProps> = ({
   }
 
   return (
-    <div className="relative inline-flex flex-col items-center">
+    <div className={`relative ${wrapperClassName || 'inline-flex'} flex-col items-center`}>
       <button
         onClick={handleOpenDirections}
         disabled={loading}

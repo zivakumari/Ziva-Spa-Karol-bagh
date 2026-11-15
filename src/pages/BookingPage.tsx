@@ -181,16 +181,16 @@ export const BookingPage: React.FC = () => {
         keywords="book spa appointment New Delhi, 24 hour spa booking Karol Bagh, late night massage Delhi, reserve massage Karol Bagh"
       />
       {/* Header Banner */}
-      <section className="py-20 bg-[#1C1917] text-white text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-xs font-semibold mb-4 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Ziva Spa – Open 24/7 · Day & Night Sessions</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-300 text-[11px] sm:text-xs font-semibold mb-4 shadow-sm max-w-full">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span className="truncate">Ziva Spa – Open 24/7 · Day & Night Sessions</span>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-100">
             Book an Appointment
           </h1>
-          <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-stone-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Reserve your therapeutic session at our Karol Bagh, New Delhi sanctuary in less than 60 seconds with instant confirmation. Walk-ins and reservations welcome round the clock.
           </p>
         </div>
@@ -198,12 +198,12 @@ export const BookingPage: React.FC = () => {
 
       {/* Booking Form Split Container */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Interactive Booking Wizard Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-stone-200/90 shadow-xs">
-            <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-8 md:p-10 border border-stone-200/90 shadow-xs">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
               {/* Step 1: Select Service */}
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 <div className="flex items-center justify-between">
                   <label className="text-xs font-semibold uppercase tracking-wider text-stone-900 block">
                     1. Select Spa Therapy or Package *
@@ -216,7 +216,7 @@ export const BookingPage: React.FC = () => {
                 <select
                   value={selectedServiceId}
                   onChange={(e) => setSelectedServiceId(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-[#C5A880] bg-stone-50/50"
+                  className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-stone-200 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-[#C5A880] bg-stone-50/50"
                 >
                   <optgroup label="Massage Therapies">
                     {SPA_SERVICES.filter((s) => s.category === 'massage').map((s) => (
@@ -250,7 +250,7 @@ export const BookingPage: React.FC = () => {
               </div>
 
               {/* Step 2: Date & Number of Guests */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="text-xs font-semibold uppercase tracking-wider text-stone-900 block mb-2">
                     2. Appointment Date *
@@ -262,7 +262,7 @@ export const BookingPage: React.FC = () => {
                       min={new Date().toISOString().split('T')[0]}
                       value={appointmentDate}
                       onChange={(e) => setAppointmentDate(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-[#C5A880] bg-stone-50/50"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-stone-200 text-xs sm:text-sm text-stone-900 focus:outline-none focus:border-[#C5A880] bg-stone-50/50"
                     />
                   </div>
                   {validationErrors.date && (
@@ -274,13 +274,13 @@ export const BookingPage: React.FC = () => {
                   <label className="text-xs font-semibold uppercase tracking-wider text-stone-900 block mb-2">
                     3. Number of Guests
                   </label>
-                  <div className="flex items-center gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {[1, 2, 3, 4].map((num) => (
                       <button
                         type="button"
                         key={num}
                         onClick={() => setNumberOfGuests(num)}
-                        className={`flex-1 py-3 rounded-xl text-xs font-semibold transition-colors border ${
+                        className={`py-2.5 sm:py-3 rounded-xl text-xs font-semibold transition-colors border text-center ${
                           numberOfGuests === num
                             ? 'bg-[#1C1917] text-white border-[#1C1917]'
                             : 'bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100'
@@ -296,7 +296,7 @@ export const BookingPage: React.FC = () => {
               {/* Step 3: Time Slot Picker */}
               <div>
                 <label className="text-xs font-semibold uppercase tracking-wider text-stone-900 block mb-2">
-                  4. Preferred Time Slot * (Spa Open: 10:00 AM – 9:30 PM)
+                  4. Preferred Time Slot * (Open 24/7 Day & Night)
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                   {TIME_SLOTS.map((slot) => (
@@ -304,7 +304,7 @@ export const BookingPage: React.FC = () => {
                       type="button"
                       key={slot}
                       onClick={() => setTimeSlot(slot)}
-                      className={`py-2.5 px-2 rounded-xl text-[11px] sm:text-xs font-medium transition-colors border text-center ${
+                      className={`py-2 px-1.5 sm:py-2.5 sm:px-2 rounded-xl text-[11px] sm:text-xs font-medium transition-colors border text-center ${
                         timeSlot === slot
                           ? 'bg-[#C5A880] text-[#1C1917] font-bold border-[#C5A880] shadow-xs'
                           : 'bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100'
@@ -442,28 +442,28 @@ export const BookingPage: React.FC = () => {
 
           {/* Right Column: Order Summary & Promo Code */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/90 shadow-md space-y-6">
+            <div className="bg-white rounded-3xl p-5 sm:p-7 md:p-8 border border-stone-200/90 shadow-md space-y-6">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A88B63] block">
                 Reservation Summary
               </span>
 
               {/* Selected Treatment Mini Card */}
-              <div className="flex gap-4 items-center p-3 rounded-2xl bg-[#FAF8F5] border border-stone-200/70">
+              <div className="flex gap-3.5 sm:gap-4 items-center p-3 rounded-2xl bg-[#FAF8F5] border border-stone-200/70">
                 <img
                   src={currentService.image}
                   alt={currentService.name}
-                  className="w-20 h-20 rounded-xl object-cover shrink-0"
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover shrink-0"
                   referrerPolicy="no-referrer"
                 />
-                <div>
-                  <span className="text-[10px] uppercase font-semibold text-[#A88B63]">
+                <div className="min-w-0 flex-1">
+                  <span className="text-[10px] uppercase font-semibold text-[#A88B63] block truncate">
                     {currentService.category}
                   </span>
-                  <h4 className="font-serif font-bold text-base text-[#1C1917] leading-snug">
+                  <h4 className="font-serif font-bold text-sm sm:text-base text-[#1C1917] leading-snug line-clamp-2">
                     {currentService.name}
                   </h4>
                   <span className="text-xs text-stone-500 flex items-center gap-1 mt-0.5">
-                    <Clock className="w-3.5 h-3.5 text-[#A88B63]" />
+                    <Clock className="w-3.5 h-3.5 text-[#A88B63] shrink-0" />
                     <span>{currentService.durationMinutes} Minutes</span>
                   </span>
                 </div>

@@ -91,7 +91,7 @@ export const CoupleSpaPage: React.FC = () => {
             <img
               src="/images/couple_spa_suite_1794307113115.jpg"
               alt="Romantic Couple Treatment Suite with Rose Petals"
-              className="w-full h-[440px] object-cover"
+              className="w-full h-[280px] sm:h-[380px] md:h-[440px] object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -163,11 +163,11 @@ export const CoupleSpaPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-7 pt-4 border-t border-stone-100 flex items-center justify-between bg-stone-50/50">
+              <div className="p-5 sm:p-7 pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-stone-50/50">
                 <div>
                   <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Price for Couple</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-2xl font-bold text-[#1C1917]">
+                    <span className="font-mono text-xl sm:text-2xl font-bold text-[#1C1917]">
                       ₹{ritual.priceINR.toLocaleString('en-IN')}
                     </span>
                     {ritual.originalPriceINR && (
@@ -180,7 +180,7 @@ export const CoupleSpaPage: React.FC = () => {
 
                 <Link
                   to={`/booking?guests=2&service=${ritual.id}`}
-                  className="px-6 py-3 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm"
+                  className="px-6 py-3 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm text-center"
                 >
                   Book for Two
                 </Link>

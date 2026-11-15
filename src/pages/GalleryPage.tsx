@@ -48,12 +48,12 @@ export const GalleryPage: React.FC = () => {
 
       {/* Filter Tabs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none px-1">
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none px-1 w-full touch-pan-x">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-colors ${
+              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap shrink-0 transition-colors ${
                 activeTab === tab.id
                   ? 'bg-[#1C1917] text-white shadow-xs font-semibold'
                   : 'bg-stone-100 text-stone-700 hover:bg-stone-200/80 hover:text-stone-900'
@@ -67,14 +67,14 @@ export const GalleryPage: React.FC = () => {
 
       {/* Gallery Photo Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setActiveModalItem(item)}
               className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-stone-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col"
             >
-              <div className="relative h-72 sm:h-80 overflow-hidden bg-stone-100">
+              <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden bg-stone-100">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
@@ -113,8 +113,8 @@ export const GalleryPage: React.FC = () => {
 
       {/* Lightbox Modal */}
       {activeModalItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="bg-[#FAF8F5] rounded-3xl max-w-4xl w-full border border-stone-300 shadow-2xl overflow-hidden relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="bg-[#FAF8F5] rounded-3xl max-w-4xl w-full border border-stone-300 shadow-2xl overflow-hidden relative max-h-[92vh] overflow-y-auto">
             <button
               onClick={() => setActiveModalItem(null)}
               className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 hover:bg-black/80 text-white transition-colors"
@@ -122,7 +122,7 @@ export const GalleryPage: React.FC = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="relative h-[400px] sm:h-[500px] bg-black">
+            <div className="relative h-[240px] sm:h-[380px] md:h-[480px] bg-black">
               <img
                 src={activeModalItem.imageUrl}
                 alt={activeModalItem.title}
@@ -131,12 +131,12 @@ export const GalleryPage: React.FC = () => {
               />
             </div>
 
-            <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-white">
+            <div className="p-5 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 bg-white">
               <div className="space-y-1">
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-[#A88B63]">
                   {activeModalItem.category} Sanctuary View
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-[#1C1917]">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1C1917]">
                   {activeModalItem.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl">
@@ -147,7 +147,7 @@ export const GalleryPage: React.FC = () => {
               <Link
                 to="/booking"
                 onClick={() => setActiveModalItem(null)}
-                className="shrink-0 px-6 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm"
+                className="w-full sm:w-auto shrink-0 px-6 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm text-center"
               >
                 Book This Experience
               </Link>

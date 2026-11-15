@@ -71,7 +71,7 @@ export const ServiceDetailPage: React.FC = () => {
               <img
                 src={service.image}
                 alt={service.name}
-                className="w-full h-[360px] sm:h-[460px] object-cover"
+                className="w-full h-[260px] sm:h-[380px] md:h-[460px] object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -173,7 +173,7 @@ export const ServiceDetailPage: React.FC = () => {
               </div>
 
               {/* Price & Duration Strip */}
-              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/70 flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/70 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div>
                   <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Duration</span>
                   <span className="font-medium text-stone-900 text-sm flex items-center gap-1.5 mt-0.5">
@@ -182,7 +182,7 @@ export const ServiceDetailPage: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="text-right">
+                <div className="sm:text-right">
                   <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Total Price</span>
                   <div className="flex items-baseline gap-2">
                     <span className="font-mono text-2xl font-bold text-[#1C1917]">
@@ -265,7 +265,7 @@ export const ServiceDetailPage: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {relatedServices.map((rel) => (
               <div
                 key={rel.id}

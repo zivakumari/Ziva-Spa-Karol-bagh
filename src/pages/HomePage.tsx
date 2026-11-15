@@ -33,70 +33,71 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-20 text-center flex flex-col items-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 text-center flex flex-col items-center">
           {/* Prominent 24/7 Hero Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-950/90 backdrop-blur-md border border-emerald-500/40 text-xs tracking-wider text-emerald-300 font-sans mb-6 shadow-lg">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 rounded-full bg-emerald-950/90 backdrop-blur-md border border-emerald-500/40 text-[11px] sm:text-xs tracking-wider text-emerald-300 font-sans mb-6 shadow-lg flex-wrap justify-center">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="font-bold uppercase tracking-wider">Ziva Spa – Open 24/7</span>
-            <span className="text-emerald-500/60">·</span>
-            <span className="text-stone-300 font-medium">Opposite Gaffar Market, Karol Bagh</span>
+            <span className="text-emerald-500/60 hidden sm:inline">·</span>
+            <span className="text-stone-300 font-medium hidden sm:inline">Opposite Gaffar Market, Karol Bagh</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-[#FAF8F5] max-w-4xl leading-[1.15] text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal tracking-tight text-[#FAF8F5] max-w-4xl leading-[1.15] text-balance">
             Where Modern Chaos Yields to <span className="italic text-[#C5A880] font-light">Timeless Serenity</span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg md:text-xl text-stone-300 font-light max-w-2xl leading-relaxed text-balance">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-light max-w-2xl leading-relaxed text-balance">
             Immerse in handcrafted restorative therapies, private couple jacuzzi suites, and pure organic botanicals. Open 24 hours daily on Arya Samaj Road, Karol Bagh, New Delhi.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto flex-wrap">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-3.5 w-full sm:w-auto flex-wrap">
             <Link
               to="/booking"
-              className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-sm font-semibold tracking-wider uppercase transition-all shadow-lg shadow-[#C5A880]/20 active:scale-95"
+              className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all shadow-lg shadow-[#C5A880]/20 active:scale-95 text-center"
             >
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4 shrink-0" />
               <span>Reserve Your Ritual</span>
             </Link>
 
             <GetDirectionsButton
               variant="luxury-gold"
               label="Get Directions"
-              className="w-full sm:w-auto px-7 py-4 text-sm rounded-xl shadow-lg"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 text-xs sm:text-sm rounded-xl shadow-lg justify-center"
+              wrapperClassName="w-full sm:w-auto"
             />
 
             <Link
               to="/services"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-stone-100 text-sm font-medium tracking-wide transition-all border border-white/20 backdrop-blur-xs"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 text-stone-100 text-xs sm:text-sm font-medium tracking-wide transition-all border border-white/20 backdrop-blur-xs text-center"
             >
               <span>Explore Menu</span>
-              <ArrowRight className="w-4 h-4 text-[#C5A880]" />
+              <ArrowRight className="w-4 h-4 text-[#C5A880] shrink-0" />
             </Link>
           </div>
 
           {/* Social Proof Strip */}
-          <div className="mt-14 pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-12 text-center text-xs text-stone-300">
+          <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 lg:gap-12 text-center text-xs text-stone-300 w-full max-w-3xl">
             <div>
               <p className="font-serif text-2xl sm:text-3xl font-bold text-[#DFCA9B]">4.9 / 5</p>
-              <p className="text-stone-400 mt-0.5">Google Rating</p>
+              <p className="text-stone-400 mt-0.5 text-[11px] sm:text-xs">Google Rating</p>
             </div>
             <div>
               <p className="font-serif text-2xl sm:text-3xl font-bold text-[#DFCA9B]">100%</p>
-              <p className="text-stone-400 mt-0.5">Organic Kerala Oils</p>
+              <p className="text-stone-400 mt-0.5 text-[11px] sm:text-xs">Organic Kerala Oils</p>
             </div>
             <div>
               <p className="font-serif text-2xl sm:text-3xl font-bold text-[#DFCA9B]">15+</p>
-              <p className="text-stone-400 mt-0.5">Master Therapists</p>
+              <p className="text-stone-400 mt-0.5 text-[11px] sm:text-xs">Master Therapists</p>
             </div>
             <div>
               <p className="font-serif text-2xl sm:text-3xl font-bold text-emerald-400 flex items-center justify-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 Open 24/7
               </p>
-              <p className="text-stone-400 mt-0.5">Day & Night Care</p>
+              <p className="text-stone-400 mt-0.5 text-[11px] sm:text-xs">Day & Night Care</p>
             </div>
           </div>
         </div>
@@ -297,7 +298,7 @@ export const HomePage: React.FC = () => {
                 Step into an exclusive sanctuary designed for two. Complete with side-by-side plush massage tables, private hydrotherapy Jacuzzi filled with rose petals, delicate candlelight, and artisan chocolates.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-2 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2 text-xs">
                 <div className="p-4 rounded-xl bg-stone-900/90 border border-stone-800">
                   <p className="font-serif text-lg font-bold text-[#DFCA9B]">Couple Harmony</p>
                   <p className="text-stone-400 mt-1">120 Min · ₹6,999</p>
@@ -310,16 +311,16 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-4 w-full sm:w-auto">
                 <Link
                   to="/couple-spa"
-                  className="px-6 py-3.5 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-xs font-semibold tracking-wider uppercase transition-colors"
+                  className="px-6 py-3.5 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-xs font-semibold tracking-wider uppercase transition-colors text-center"
                 >
                   Explore Couple Spa
                 </Link>
                 <Link
                   to="/booking?service=couple-harmony-retreat"
-                  className="px-6 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs font-semibold tracking-wider uppercase transition-colors border border-stone-700"
+                  className="px-6 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs font-semibold tracking-wider uppercase transition-colors border border-stone-700 text-center"
                 >
                   Book Private Suite
                 </Link>
@@ -331,7 +332,7 @@ export const HomePage: React.FC = () => {
                 <img
                   src="/images/couple_spa_suite_1794307113115.jpg"
                   alt="Couple Spa Suite at ZIVA SPA Karol Bagh New Delhi"
-                  className="w-full h-[400px] sm:h-[460px] object-cover"
+                  className="w-full h-[320px] sm:h-[400px] md:h-[460px] object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -342,7 +343,7 @@ export const HomePage: React.FC = () => {
 
       {/* Special Welcome Offer Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="rounded-3xl bg-gradient-to-br from-[#FAF8F5] via-[#F4EFE6] to-[#EAE3D8] border border-[#C5A880]/30 p-8 sm:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="rounded-3xl bg-gradient-to-br from-[#FAF8F5] via-[#F4EFE6] to-[#EAE3D8] border border-[#C5A880]/30 p-6 sm:p-10 md:p-12 shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 sm:gap-8">
           <div className="space-y-3 max-w-xl">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#A88B63]">
               Special Welcome Privilege
@@ -350,7 +351,7 @@ export const HomePage: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#1C1917]">
               Receive 20% Off Your Inaugural Ritual
             </h3>
-            <p className="text-stone-700 text-sm leading-relaxed">
+            <p className="text-stone-700 text-xs sm:text-sm leading-relaxed">
               Experience the pinnacle of wellness in Karol Bagh. Use promo code{' '}
               <strong className="font-mono text-[#A88B63] bg-white/70 px-2 py-0.5 rounded border border-[#C5A880]/40">
                 {welcomeOffer.code}
@@ -359,16 +360,16 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
             <Link
               to={`/booking?promo=${welcomeOffer.code}`}
-              className="px-8 py-4 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-md"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-md text-center"
             >
               Apply & Book Now
             </Link>
             <Link
               to="/offers"
-              className="px-6 py-4 rounded-xl bg-white hover:bg-stone-50 text-stone-800 text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300"
+              className="px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-stone-50 text-stone-800 text-xs font-semibold uppercase tracking-wider transition-all border border-stone-300 text-center"
             >
               All Special Offers
             </Link>
@@ -462,34 +463,35 @@ export const HomePage: React.FC = () => {
 
       {/* Ready to Experience ZIVA CTA Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="rounded-3xl bg-[#1C1917] text-white p-8 sm:p-14 relative overflow-hidden text-center flex flex-col items-center">
+        <div className="rounded-3xl bg-[#1C1917] text-white p-6 sm:p-10 md:p-14 relative overflow-hidden text-center flex flex-col items-center">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Begin Your Renewal
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif mt-3 text-stone-100 max-w-2xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif mt-3 text-stone-100 max-w-2xl leading-tight">
             Reserve Your Serenity at ZIVA SPA Today
           </h2>
-          <p className="text-stone-400 text-sm sm:text-base mt-4 max-w-xl leading-relaxed">
+          <p className="text-stone-400 text-xs sm:text-sm md:text-base mt-4 max-w-xl leading-relaxed">
             Open 24 hours a day, 7 days a week (24/7). Book online in 60 seconds with instant mobile confirmation, or visit our Karol Bagh sanctuary anytime.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto flex-wrap">
             <Link
               to="/booking"
-              className="px-8 py-4 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-xs font-semibold uppercase tracking-wider transition-colors shadow-lg shadow-[#C5A880]/20"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#C5A880] hover:bg-[#DFCA9B] text-[#1C1917] text-xs font-semibold uppercase tracking-wider transition-colors shadow-lg shadow-[#C5A880]/20 text-center"
             >
               Book Instant Appointment
             </Link>
             <GetDirectionsButton
               variant="secondary"
               label="Get Driving Directions"
-              className="px-6 py-4 text-xs font-semibold"
+              className="px-5 sm:px-6 py-3.5 sm:py-4 text-xs font-semibold justify-center"
+              wrapperClassName="w-full sm:w-auto"
             />
             <a
               href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
-              className="flex items-center gap-2 px-6 py-4 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs font-semibold tracking-wider transition-colors border border-stone-700"
+              className="flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-stone-800 hover:bg-stone-700 text-white text-xs font-semibold tracking-wider transition-colors border border-stone-700 text-center"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C5A880]" />
+              <Phone className="w-3.5 h-3.5 text-[#C5A880] shrink-0" />
               <span>24/7 Call: {BUSINESS_INFO.phonePrimary}</span>
             </a>
           </div>

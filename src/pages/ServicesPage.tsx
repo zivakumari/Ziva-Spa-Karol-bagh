@@ -51,14 +51,14 @@ export const ServicesPage: React.FC = () => {
 
       {/* Filter & Search Bar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-white p-4 sm:p-6 rounded-2xl border border-stone-200/90 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        <div className="bg-white p-3.5 sm:p-5 md:p-6 rounded-2xl border border-stone-200/90 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           {/* Category Tabs (Segmented Control per Frontend Design guidelines) */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 md:pb-0 scrollbar-none w-full md:w-auto touch-pan-x">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap shrink-0 transition-colors ${
+                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap shrink-0 transition-colors ${
                   selectedCategory === cat.id
                     ? 'bg-[#1C1917] text-white shadow-xs font-semibold'
                     : 'bg-stone-100 text-stone-700 hover:bg-stone-200/80 hover:text-stone-900'
@@ -70,7 +70,7 @@ export const ServicesPage: React.FC = () => {
           </div>
 
           {/* Search Input */}
-          <div className="relative shrink-0 md:w-72">
+          <div className="relative w-full md:w-72 shrink-0">
             <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
@@ -159,11 +159,11 @@ export const ServicesPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <div className="pt-4 border-t border-stone-100 flex items-center justify-between gap-2 flex-wrap">
                     <div>
                       <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Price</span>
                       <div className="flex items-baseline gap-2">
-                        <span className="font-mono text-xl font-bold text-[#1C1917]">
+                        <span className="font-mono text-lg sm:text-xl font-bold text-[#1C1917]">
                           ₹{service.priceINR.toLocaleString('en-IN')}
                         </span>
                         {service.originalPriceINR && (
@@ -174,16 +174,16 @@ export const ServicesPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                       <Link
                         to={`/services/${service.id}`}
-                        className="px-3 py-2 text-xs font-semibold text-stone-700 hover:text-stone-900 transition-colors"
+                        className="px-2.5 sm:px-3 py-2 text-xs font-semibold text-stone-700 hover:text-stone-900 transition-colors"
                       >
                         Details
                       </Link>
                       <Link
                         to={`/booking?service=${service.id}`}
-                        className="px-4 py-2 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-xs"
+                        className="px-3.5 sm:px-4 py-2 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-xs"
                       >
                         Book Now
                       </Link>
@@ -198,24 +198,24 @@ export const ServicesPage: React.FC = () => {
 
       {/* Custom Consultation Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-[#FAF8F5] rounded-3xl border border-stone-200/90 p-8 sm:p-12 text-center max-w-3xl mx-auto space-y-4">
+        <div className="bg-[#FAF8F5] rounded-3xl border border-stone-200/90 p-6 sm:p-10 md:p-12 text-center max-w-3xl mx-auto space-y-4">
           <Sparkles className="w-8 h-8 text-[#A88B63] mx-auto" />
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1C1917]">
             Not Sure Which Treatment is Ideal for You?
           </h3>
-          <p className="text-stone-600 text-sm leading-relaxed">
+          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
             Our wellness concierges are available to provide complimentary consultations tailored to your current physical fatigue, chronic tension, or celebratory occasion.
           </p>
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
             <a
               href={`tel:${BUSINESS_INFO.phonePrimary.replace(/\s+/g, '')}`}
-              className="px-6 py-3 rounded-xl bg-[#1C1917] text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-colors"
+              className="px-6 py-3 rounded-xl bg-[#1C1917] text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-colors text-center"
             >
               Call Concierge: {BUSINESS_INFO.phonePrimary}
             </a>
             <Link
               to="/contact"
-              className="px-6 py-3 rounded-xl bg-white text-stone-800 text-xs font-semibold uppercase tracking-wider hover:bg-stone-100 transition-colors border border-stone-300"
+              className="px-6 py-3 rounded-xl bg-white text-stone-800 text-xs font-semibold uppercase tracking-wider hover:bg-stone-100 transition-colors border border-stone-300 text-center"
             >
               Send Inquiry
             </Link>

@@ -254,21 +254,21 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
   return (
     <div className="bg-white rounded-3xl border border-stone-200/90 shadow-md overflow-hidden">
       {/* Map Header with Controls & Prominent 24/7 Availability */}
-      <div className="p-5 md:p-7 border-b border-stone-200/80 flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-gradient-to-r from-stone-50 via-white to-stone-50">
-        <div>
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/40 text-xs font-bold uppercase tracking-wider">
+      <div className="p-4 sm:p-6 md:p-7 border-b border-stone-200/80 flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6 bg-gradient-to-r from-stone-50 via-white to-stone-50">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 sm:gap-2.5 flex-wrap">
+            <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider shrink-0">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               Ziva Spa – Open 24/7
             </span>
 
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#A88B63] flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5" />
+            <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#A88B63] flex items-center gap-1">
+              <MapPin className="w-3.5 h-3.5 shrink-0" />
               <span>Exact Physical Location</span>
             </span>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#1C1917] mt-1.5">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#1C1917] mt-1.5">
             ZIVA SPA · Karol Bagh Sanctuary
           </h3>
 
@@ -276,28 +276,29 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
             {BUSINESS_INFO.address}
           </p>
 
-          <div className="flex items-center gap-4 mt-2 text-xs text-stone-500">
+          <div className="flex items-center gap-x-3 gap-y-1 mt-2 text-xs text-stone-500 flex-wrap">
             <span>Opposite Gaffar Market</span>
-            <span>·</span>
+            <span className="hidden sm:inline">·</span>
             <span>Arya Samaj Road, Karol Bagh</span>
-            <span>·</span>
+            <span className="hidden sm:inline">·</span>
             <span className="font-mono text-stone-700">Coordinates: {spaLat}° N, {spaLng}° E</span>
           </div>
         </div>
 
         {/* Action Buttons: Prominent Get Directions, Distance, Copy */}
-        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 shrink-0 w-full lg:w-auto">
           {/* Prominent Get Directions Button */}
           <GetDirectionsButton
             variant="luxury-gold"
             label="Get Directions"
-            className="text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg"
+            className="text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-lg w-full sm:w-auto justify-center"
+            wrapperClassName="w-full sm:w-auto"
           />
 
           <button
             onClick={handleDetectLocation}
             disabled={locating}
-            className="flex items-center gap-2 px-4 py-3 text-xs sm:text-sm font-medium text-[#1C1917] bg-white hover:bg-stone-100 rounded-xl transition-colors border border-stone-300 shadow-xs active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-[#1C1917] bg-white hover:bg-stone-100 rounded-xl transition-colors border border-stone-300 shadow-xs active:scale-[0.98] w-full sm:w-auto"
             title="Calculate exact distance and travel time from your current location"
           >
             <Compass className={`w-4 h-4 text-[#A88B63] ${locating ? 'animate-spin' : ''}`} />
@@ -306,26 +307,26 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
 
           <button
             onClick={handleCopyAddress}
-            className="flex items-center gap-1.5 px-3.5 py-3 text-xs font-medium text-stone-700 hover:text-stone-900 bg-white hover:bg-stone-100 rounded-xl transition-colors border border-stone-300 shadow-xs"
+            className="flex items-center justify-center gap-1.5 px-3.5 py-2.5 sm:py-3 text-xs font-medium text-stone-700 hover:text-stone-900 bg-white hover:bg-stone-100 rounded-xl transition-colors border border-stone-300 shadow-xs w-full sm:w-auto"
             title="Copy exact spa address"
           >
             {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-stone-500" />}
-            <span className="hidden sm:inline">{copied ? 'Address Copied!' : 'Copy Address'}</span>
+            <span>{copied ? 'Address Copied!' : 'Copy Address'}</span>
           </button>
         </div>
       </div>
 
       {/* Proximity & ETA Badge (if calculated) */}
       {distanceKm !== null && etaMinutes !== null && (
-        <div className="bg-[#FAF8F5] px-5 md:px-7 py-3.5 border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm text-[#1C1917]">
-          <div className="flex items-center gap-3 flex-wrap">
+        <div className="bg-[#FAF8F5] px-4 sm:px-6 md:px-7 py-3.5 border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm text-[#1C1917]">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
             <div className="flex items-center gap-1.5 font-medium">
-              <Car className="w-4 h-4 text-[#A88B63]" />
+              <Car className="w-4 h-4 text-[#A88B63] shrink-0" />
               <span>
                 From <strong className="text-stone-900">{userLocation?.name}</strong>:
               </span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
               <span className="font-semibold text-[#1C1917]">{distanceKm} km drive</span>
               <span className="text-stone-400">·</span>
               <span className="flex items-center gap-1 text-emerald-700 font-semibold">
@@ -349,10 +350,10 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
 
       {/* View Switcher Bar */}
       <div className="bg-stone-100/70 px-4 sm:px-5 py-2.5 border-b border-stone-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs">
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 flex-wrap w-full sm:w-auto">
           <button
             onClick={() => setMapType('google-embed')}
-            className={`px-3.5 py-1.5 rounded-lg font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex-1 sm:flex-none text-center ${
               mapType === 'google-embed'
                 ? 'bg-white shadow-xs text-[#1C1917] font-semibold border border-stone-200'
                 : 'text-stone-600 hover:text-stone-900'
@@ -362,7 +363,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
           </button>
           <button
             onClick={() => setMapType('interactive')}
-            className={`px-3.5 py-1.5 rounded-lg font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg font-medium transition-colors flex-1 sm:flex-none text-center ${
               mapType === 'interactive'
                 ? 'bg-white shadow-xs text-[#1C1917] font-semibold border border-stone-200'
                 : 'text-stone-600 hover:text-stone-900'
@@ -372,15 +373,15 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
           </button>
         </div>
 
-        <div className="flex items-center gap-3 text-stone-600">
-          <span className="hidden sm:inline">
+        <div className="flex items-center gap-3 text-stone-600 justify-between sm:justify-end">
+          <span className="hidden md:inline truncate max-w-xs">
             📍 Arya Samaj Road, Opp. Gaffar Market, Karol Bagh
           </span>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${spaLat},${spaLng}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#A88B63] hover:underline font-semibold flex items-center gap-1"
+            className="text-[#A88B63] hover:underline font-semibold flex items-center gap-1 shrink-0"
           >
             <span>Open in Maps App</span>
             <ExternalLink className="w-3 h-3" />
@@ -405,15 +406,15 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
 
       {/* Directions & Proximity Hubs */}
       {showDirectionsPanel && (
-        <div className="p-5 md:p-7 bg-[#FAF8F5] border-t border-stone-200/80">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3.5">
+        <div className="p-4 sm:p-6 md:p-7 bg-[#FAF8F5] border-t border-stone-200/80">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 mb-3.5">
             <span className="text-xs font-bold uppercase tracking-wider text-stone-700">
               Quick Driving Routes From Major Delhi Hubs:
             </span>
             <span className="text-[11px] text-stone-500">Select any hub to calculate distance & ETA</span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
             {PRESET_ORIGINS.map((hub) => {
               const isSelected = activePreset === hub.name;
               return (
@@ -423,7 +424,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
                     setActivePreset(hub.name);
                     setOrigin(hub.lat, hub.lng, hub.name);
                   }}
-                  className={`text-left p-3 rounded-2xl border text-xs transition-all ${
+                  className={`text-left p-2.5 sm:p-3 rounded-2xl border text-xs transition-all ${
                     isSelected
                       ? 'bg-white border-[#C5A880] shadow-md ring-2 ring-[#C5A880]/40'
                       : 'bg-white border-stone-200 hover:border-stone-300 hover:shadow-xs'
@@ -437,7 +438,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
           </div>
 
           {/* Practical Arrival & Transit Notes */}
-          <div className="mt-5 pt-5 border-t border-stone-200/70 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-stone-600">
+          <div className="mt-5 pt-5 border-t border-stone-200/70 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 text-xs text-stone-600">
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>
@@ -450,7 +451,7 @@ export const SpaMap: React.FC<{ showDirectionsPanel?: boolean; heightClass?: str
                 <strong>Dedicated Parking:</strong> Reserved guest parking assistance on Arya Samaj Road opposite Gaffar Market with complimentary valet.
               </span>
             </div>
-            <div className="flex items-start gap-2.5">
+            <div className="flex items-start gap-2.5 sm:col-span-2 md:col-span-1">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>
                 <strong>24-Hour Helpdesk:</strong> For turn-by-turn navigation guidance, call our 24/7 concierge at{' '}

@@ -62,7 +62,7 @@ export const AboutPage: React.FC = () => {
               <img
                 src="/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
                 alt="ZIVA SPA Relaxation Sanctuary"
-                className="w-full h-[450px] object-cover"
+                className="w-full h-[280px] sm:h-[380px] md:h-[450px] object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -71,21 +71,21 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 4 Pillars of Excellence */}
-      <section className="bg-[#FAF8F5] py-20 border-y border-stone-200/80">
+      <section className="bg-[#FAF8F5] py-14 sm:py-20 border-y border-stone-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A88B63]">
               The Gold Standard
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-[#1C1917] mt-2">
               The Four Pillars of ZIVA Wellness
             </h2>
-            <p className="text-stone-600 text-sm mt-2">
+            <p className="text-stone-600 text-xs sm:text-sm mt-2">
               Our uncompromising commitments to safety, authenticity, craftsmanship, and serenity.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#C5A880]/15 flex items-center justify-center text-[#A88B63]">
                 <Award className="w-6 h-6" />
@@ -139,12 +139,12 @@ export const AboutPage: React.FC = () => {
 
       {/* Facility & Sanctuary Suites */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-xl border border-stone-200">
             <img
               src="/images/couple_spa_suite_1794307113115.jpg"
               alt="ZIVA SPA Private Suite"
-              className="w-full h-[420px] object-cover"
+              className="w-full h-[260px] sm:h-[350px] md:h-[420px] object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -153,10 +153,10 @@ export const AboutPage: React.FC = () => {
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A88B63]">
               Private Spaces
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#1C1917] leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#1C1917] leading-tight">
               Designed for Uncompromised Privacy
             </h2>
-            <p className="text-stone-600 text-sm leading-relaxed">
+            <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
               At ZIVA SPA, each room is a self-contained world. Whether booking an individual deep tissue therapy or our celebrated Couple Harmony retreat, you enjoy:
             </p>
 
@@ -179,7 +179,7 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-2 sm:pt-4">
               <Link
                 to="/gallery"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1C1917] text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-800 transition-colors"
@@ -194,7 +194,7 @@ export const AboutPage: React.FC = () => {
 
       {/* Location & Contact Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="rounded-3xl bg-[#1C1917] text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="rounded-3xl bg-[#1C1917] text-white p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 sm:gap-8">
           <div className="space-y-2">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#C5A880]">
               Visit ZIVA SPA Karol Bagh
@@ -207,16 +207,16 @@ export const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 shrink-0 w-full md:w-auto">
             <Link
               to="/booking"
-              className="px-6 py-3.5 rounded-xl bg-[#C5A880] text-[#1C1917] text-xs font-semibold uppercase tracking-wider hover:bg-[#DFCA9B] transition-colors"
+              className="px-6 py-3.5 rounded-xl bg-[#C5A880] text-[#1C1917] text-xs font-semibold uppercase tracking-wider hover:bg-[#DFCA9B] transition-colors text-center"
             >
               Book an Appointment
             </Link>
             <Link
               to="/contact"
-              className="px-6 py-3.5 rounded-xl bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-700 transition-colors border border-stone-700"
+              className="px-6 py-3.5 rounded-xl bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider hover:bg-stone-700 transition-colors border border-stone-700 text-center"
             >
               View Google Maps
             </Link>

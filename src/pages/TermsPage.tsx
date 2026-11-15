@@ -12,7 +12,7 @@ export const TermsPage: React.FC = () => {
         description="Official sanctuary terms, cancellation policies, and etiquette guidelines for ZIVA SPA Karol Bagh, New Delhi."
         canonicalPath="/terms-conditions"
       />
-      <section className="py-16 bg-[#1C1917] text-white text-center">
+      <section className="py-12 sm:py-16 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
             Sanctuary Governance
@@ -27,7 +27,7 @@ export const TermsPage: React.FC = () => {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200/90 shadow-xs space-y-8 text-xs sm:text-sm text-stone-700 leading-relaxed">
+        <div className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 border border-stone-200/90 shadow-xs space-y-8 text-xs sm:text-sm text-stone-700 leading-relaxed">
           <section className="space-y-3">
             <h2 className="font-serif text-xl font-bold text-[#1C1917]">1. Arrival & Etiquette Protocol</h2>
             <p>
@@ -79,7 +79,7 @@ export const TermsPage: React.FC = () => {
             </p>
           </section>
 
-          <div className="pt-6 border-t border-stone-100 flex items-center justify-between">
+          <div className="pt-6 border-t border-stone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#A88B63] hover:underline">
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Return to Sanctuary Home</span>

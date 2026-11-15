@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 480px;
+}
+
 @layer base {
   :root {
     --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -9,11 +13,45 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
   }
 
-  h1, h2, h3, .font-display {
-    font-family: var(--font-serif);
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    min-height: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-serif);
+    overflow-wrap: break-word;
+  }
+
+  /* Prevent awkward mobile touch zoom on inputs */
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Utility to hide scrollbars while allowing touch scrolling */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 /* Custom leaflet map adjustments for luxury dark/gold theme */

@@ -32,12 +32,12 @@ export const BodySpaPage: React.FC = () => {
 
       {/* Featured Body Ritual Spotlight */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl border border-stone-200/90 shadow-xs">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white p-6 sm:p-8 md:p-12 rounded-3xl border border-stone-200/90 shadow-xs">
           <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-md">
             <img
               src="/images/body_treatment_herbal_scrub_1794307112654.jpg"
               alt="Body Scrub & Herbal Preparations"
-              className="w-full h-[360px] sm:h-[420px] object-cover"
+              className="w-full h-[260px] sm:h-[350px] md:h-[420px] object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -87,13 +87,13 @@ export const BodySpaPage: React.FC = () => {
           Available Body Spa Rituals
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {bodyTreatments.map((service) => (
             <div
               key={service.id}
               className="bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group"
             >
-              <div className="relative h-64 overflow-hidden bg-stone-100">
+              <div className="relative h-56 sm:h-64 overflow-hidden bg-stone-100">
                 <img
                   src={service.image}
                   alt={service.name}
@@ -106,7 +106,7 @@ export const BodySpaPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
                   <div className="flex items-center justify-between text-xs text-stone-500 mb-1">
                     <span className="flex items-center gap-1 text-stone-700 font-medium">
@@ -125,24 +125,24 @@ export const BodySpaPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
+                <div className="pt-4 border-t border-stone-100 flex items-center justify-between gap-2 flex-wrap">
                   <div>
                     <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Price</span>
-                    <span className="font-mono text-xl font-bold text-[#1C1917]">
+                    <span className="font-mono text-lg sm:text-xl font-bold text-[#1C1917]">
                       ₹{service.priceINR.toLocaleString('en-IN')}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <Link
                       to={`/services/${service.id}`}
-                      className="px-3 py-2 text-xs font-semibold text-stone-700 hover:text-stone-900 transition-colors"
+                      className="px-2.5 sm:px-3 py-2 text-xs font-semibold text-stone-700 hover:text-stone-900 transition-colors"
                     >
                       Details
                     </Link>
                     <Link
                       to={`/booking?service=${service.id}`}
-                      className="px-4 py-2 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-xs"
+                      className="px-3.5 sm:px-4 py-2 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-xs"
                     >
                       Book Now
                     </Link>

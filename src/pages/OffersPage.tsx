@@ -86,7 +86,7 @@ export const OffersPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-7 pt-4 border-t border-stone-100 bg-[#FAF8F5] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+                <div className="p-5 sm:p-7 pt-4 border-t border-stone-100 bg-[#FAF8F5] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
                   <div className="flex items-center gap-2">
                     <div className="px-3.5 py-2 rounded-xl bg-white border border-stone-300 font-mono font-bold text-sm text-[#1C1917] tracking-wider">
                       {offer.code}

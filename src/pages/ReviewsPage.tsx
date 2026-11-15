@@ -70,14 +70,14 @@ export const ReviewsPage: React.FC = () => {
 
       {/* Aggregate Score Card */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="bg-white p-8 sm:p-12 rounded-3xl border border-stone-200/90 shadow-xs grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="bg-white p-6 sm:p-8 md:p-12 rounded-3xl border border-stone-200/90 shadow-xs grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
           <div className="md:col-span-5 text-center md:text-left space-y-3">
             <span className="text-xs font-semibold uppercase tracking-widest text-[#A88B63]">
               Overall Rating
             </span>
             <div className="flex items-baseline justify-center md:justify-start gap-3">
-              <span className="font-serif text-5xl sm:text-6xl font-bold text-[#1C1917]">4.9</span>
-              <span className="text-stone-400 text-lg font-mono">/ 5.0</span>
+              <span className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-[#1C1917]">4.9</span>
+              <span className="text-stone-400 text-base sm:text-lg font-mono">/ 5.0</span>
             </div>
             <div className="flex items-center justify-center md:justify-start text-[#C5A880]">
               {[...Array(5)].map((_, i) => (
@@ -139,11 +139,11 @@ export const ReviewsPage: React.FC = () => {
 
       {/* Reviews Cards List */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-xs flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-5 sm:p-7 border border-stone-200/90 shadow-xs flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -220,7 +220,7 @@ export const ReviewsPage: React.FC = () => {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="text-[11px] font-semibold uppercase text-stone-700 block mb-1">
                       Location / City

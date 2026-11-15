@@ -6,6 +6,7 @@ interface ZivaLogoProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   layout?: 'horizontal' | 'stacked' | 'icon-only';
   showSubtitle?: boolean;
+  subtitleClassName?: string;
   show247Badge?: boolean;
   className?: string;
 }
@@ -15,6 +16,7 @@ export const ZivaLogo: React.FC<ZivaLogoProps> = ({
   size = 'md',
   layout = 'horizontal',
   showSubtitle = true,
+  subtitleClassName = '',
   show247Badge = false,
   className = '',
 }) => {
@@ -24,32 +26,32 @@ export const ZivaLogo: React.FC<ZivaLogoProps> = ({
   // Dimension scaling ensuring exact 1:1 aspect ratio without distortion
   const iconSizes = {
     xs: 'w-7 h-7 sm:w-8 sm:h-8',
-    sm: 'w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11',
-    md: 'w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14',
+    sm: 'w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10',
+    md: 'w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 xl:w-12 xl:h-12',
     lg: 'w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20',
     xl: 'w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28',
   };
 
   const brandTextSizes = {
     xs: 'text-sm tracking-[0.20em]',
-    sm: 'text-base sm:text-lg tracking-[0.22em]',
-    md: 'text-lg sm:text-xl md:text-2xl tracking-[0.24em]',
+    sm: 'text-sm sm:text-base tracking-[0.22em]',
+    md: 'text-base sm:text-lg xl:text-xl tracking-[0.22em] xl:tracking-[0.24em]',
     lg: 'text-2xl sm:text-3xl tracking-[0.26em]',
     xl: 'text-3xl sm:text-4xl md:text-5xl tracking-[0.28em]',
   };
 
   const spaTextSizes = {
     xs: 'text-[11px] tracking-[0.24em]',
-    sm: 'text-xs sm:text-sm tracking-[0.28em]',
-    md: 'text-xs sm:text-sm md:text-base tracking-[0.3em]',
+    sm: 'text-xs tracking-[0.28em]',
+    md: 'text-xs sm:text-sm xl:text-base tracking-[0.28em] xl:tracking-[0.3em]',
     lg: 'text-sm sm:text-lg tracking-[0.32em]',
     xl: 'text-lg sm:text-2xl tracking-[0.34em]',
   };
 
   const subtitleSizes = {
     xs: 'text-[7px] tracking-[0.22em]',
-    sm: 'text-[8px] sm:text-[9px] tracking-[0.25em]',
-    md: 'text-[9px] sm:text-[10px] tracking-[0.28em]',
+    sm: 'text-[7px] sm:text-[8px] tracking-[0.25em]',
+    md: 'text-[8px] sm:text-[9px] xl:text-[10px] tracking-[0.26em] xl:tracking-[0.28em]',
     lg: 'text-[10px] sm:text-xs tracking-[0.3em]',
     xl: 'text-xs sm:text-sm tracking-[0.32em]',
   };
@@ -113,7 +115,7 @@ export const ZivaLogo: React.FC<ZivaLogoProps> = ({
 
           {showSubtitle && (
             <span
-              className={`uppercase font-sans font-medium mt-1 leading-none ${subtitleSizes[size]} ${subtitleColor}`}
+              className={`uppercase font-sans font-medium mt-1 leading-none ${subtitleSizes[size]} ${subtitleColor} ${subtitleClassName}`}
             >
               Luxury Wellness · New Delhi
             </span>

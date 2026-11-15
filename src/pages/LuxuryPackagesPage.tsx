@@ -98,11 +98,11 @@ export const LuxuryPackagesPage: React.FC = () => {
               </div>
 
               {/* Purchase Strip */}
-              <div className="p-7 pt-4 border-t border-stone-100 flex items-center justify-between bg-stone-50/60">
+              <div className="p-5 sm:p-7 pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-stone-50/60">
                 <div>
                   <span className="text-[10px] text-stone-400 uppercase tracking-wider block">Package Price</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-2xl font-bold text-[#1C1917]">
+                    <span className="font-mono text-xl sm:text-2xl font-bold text-[#1C1917]">
                       ₹{pkg.priceINR.toLocaleString('en-IN')}
                     </span>
                     <span className="font-mono text-xs text-stone-400 line-through">
@@ -113,7 +113,7 @@ export const LuxuryPackagesPage: React.FC = () => {
 
                 <Link
                   to={`/booking?package=${pkg.id}`}
-                  className="px-6 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm"
+                  className="px-6 py-3.5 rounded-xl bg-[#1C1917] hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm text-center"
                 >
                   Book Package
                 </Link>
@@ -125,12 +125,12 @@ export const LuxuryPackagesPage: React.FC = () => {
 
       {/* Gift Vouchers Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#1C1917] via-[#292524] to-[#1C1917] text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-stone-800">
+        <div className="rounded-3xl bg-gradient-to-r from-[#1C1917] via-[#292524] to-[#1C1917] text-white p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 sm:gap-8 border border-stone-800">
           <div className="space-y-3 max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C5A880]">
               Gift The Art of Relaxation
             </span>
-            <h3 className="font-serif text-3xl font-bold text-stone-100">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-stone-100">
               ZIVA SPA Bespoke Gift Vouchers
             </h3>
             <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
@@ -138,12 +138,12 @@ export const LuxuryPackagesPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="flex items-center gap-4 shrink-0 w-full md:w-auto">
             <a
               href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hello%20Ziva%20Spa,%20I%20would%20like%20to%20order%20a%20Spa%20Gift%20Voucher.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-xl bg-[#C5A880] text-[#1C1917] text-xs font-semibold uppercase tracking-wider hover:bg-[#DFCA9B] transition-colors"
+              className="w-full md:w-auto px-6 py-3.5 rounded-xl bg-[#C5A880] text-[#1C1917] text-xs font-semibold uppercase tracking-wider hover:bg-[#DFCA9B] transition-colors text-center"
             >
               Order Gift Voucher
             </a>
