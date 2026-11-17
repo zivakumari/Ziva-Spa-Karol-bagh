@@ -175,10 +175,14 @@ export const BookingPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Book Appointment – Open 24/7 | Ziva Spa Karol Bagh New Delhi"
-        description="Schedule your wellness therapy at Ziva Spa (Open 24/7) Karol Bagh, New Delhi. Select your preferred date, day or late-night time slot with instant mobile confirmation."
+        title="Book Spa Appointment in Karol Bagh, New Delhi | Ziva Spa Online"
+        description="Schedule your massage or spa therapy at Ziva Spa on Arya Samaj Road, Karol Bagh, New Delhi. Select your preferred date, time slot, and treatment with instant booking."
         canonicalPath="/booking"
-        keywords="book spa appointment New Delhi, 24 hour spa booking Karol Bagh, late night massage Delhi, reserve massage Karol Bagh"
+        keywords="book spa appointment Karol Bagh, spa booking New Delhi, reserve massage Karol Bagh, Ziva Spa booking, couple spa booking Delhi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Book Appointment', item: '/booking' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">
@@ -188,7 +192,7 @@ export const BookingPage: React.FC = () => {
             <span className="truncate">Ziva Spa – Open 24/7 · Day & Night Sessions</span>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-100">
-            Book an Appointment
+            Book Spa Appointment in Karol Bagh, New Delhi
           </h1>
           <p className="mt-3 sm:mt-4 text-stone-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Reserve your therapeutic session at our Karol Bagh, New Delhi sanctuary in less than 60 seconds with instant confirmation. Walk-ins and reservations welcome round the clock.
@@ -542,7 +546,7 @@ export const BookingPage: React.FC = () => {
               {/* Location Mini Notice */}
               <div className="text-[11px] text-stone-500 bg-stone-50 p-3.5 rounded-xl space-y-1">
                 <strong className="text-stone-800 block">ZIVA SPA Karol Bagh</strong>
-                <p>2nd Floor, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA, Karol Bagh, New Delhi – 110005</p>
+                <p>3rd Floor, 10189/92, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA, Karol Bagh, New Delhi – 110005</p>
               </div>
             </div>
           </div>

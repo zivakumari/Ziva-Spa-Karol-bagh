@@ -51,9 +51,10 @@ export const ManageBookingsPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Manage Your Booking – Lookup, Reschedule or Cancel"
-        description="Search your appointment by reference or mobile number, view digital passes, or reschedule appointments at ZIVA SPA Karol Bagh, New Delhi."
+        title="Manage Your Booking – Lookup, Reschedule or Cancel | Ziva Spa"
+        description="Search your appointment by reference or mobile number, view digital passes, or reschedule appointments at Ziva Spa Karol Bagh, New Delhi."
         canonicalPath="/my-bookings"
+        noindex={true}
       />
       {/* Header Banner */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">

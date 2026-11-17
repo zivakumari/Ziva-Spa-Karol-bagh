@@ -8,9 +8,13 @@ export const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="space-y-12 pb-24">
       <SEOHead
-        title="Privacy Policy & Health Information Safeguards"
-        description="ZIVA SPA's privacy protocols, health disclosure safeguards, and data governance standards in Karol Bagh, New Delhi."
+        title="Privacy Policy | Ziva Spa Karol Bagh, New Delhi"
+        description="Privacy guidelines and guest confidentiality standards for Ziva Spa in Karol Bagh, New Delhi."
         canonicalPath="/privacy-policy"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Privacy Policy', item: '/privacy-policy' },
+        ]}
       />
       <section className="py-12 sm:py-16 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">
@@ -31,7 +35,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section className="space-y-3">
             <h2 className="font-serif text-xl font-bold text-[#1C1917]">1. Commitment to Guest Confidentiality</h2>
             <p>
-              At <strong>ZIVA SPA</strong> ("we", "our", or "the Sanctuary"), safeguarding your personal and sensitive health information is paramount. This Privacy Policy outlines how we collect, utilize, and protect your data when you visit our website (zivaspa.in), book an appointment, or utilize therapies at our physical sanctuary located at {BUSINESS_INFO.address}.
+              At <strong>ZIVA SPA</strong> ("we", "our", or "the Sanctuary"), safeguarding your personal and sensitive health information is paramount. This Privacy Policy outlines how we collect, utilize, and protect your data when you visit our website (zivaspa.online), book an appointment, or utilize therapies at our physical sanctuary located at {BUSINESS_INFO.address}.
             </p>
           </section>
 

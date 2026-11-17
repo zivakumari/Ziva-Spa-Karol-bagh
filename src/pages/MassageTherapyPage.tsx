@@ -10,10 +10,14 @@ export const MassageTherapyPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Massage Therapy (Open 24/7) – Swedish, Deep Tissue, Hot Stone & Balinese"
-        description="Open 24/7 in Karol Bagh, New Delhi. Master Swedish, Deep Tissue, Hot Stone, and Ayurvedic Potli massages with certified anatomy therapists, organic oils, and Google Maps directions."
+        title="Massage in Karol Bagh, New Delhi | Ziva Spa Therapeutic Collection"
+        description="Experience certified massage in Karol Bagh, New Delhi at Ziva Spa. Master Swedish, Deep Tissue, Hot Stone, Balinese, and Ayurvedic Potli massages with organic oils."
         canonicalPath="/massage-therapy"
-        keywords="24/7 massage New Delhi, massage therapy Karol Bagh, Swedish massage Delhi, deep tissue massage New Delhi, late night massage Delhi, hot stone therapy Karol Bagh, Balinese massage"
+        keywords="Massage in Karol Bagh, massage in Karol Bagh New Delhi, Swedish massage Karol Bagh, deep tissue massage New Delhi, hot stone therapy Karol Bagh, Balinese massage Delhi, best spa in Karol Bagh"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Massage Therapy', item: '/massage-therapy' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -22,10 +26,10 @@ export const MassageTherapyPage: React.FC = () => {
             Therapeutic Excellence
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Massage Therapy Collection
+            Massage in Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Targeting chronic physical tension, desk posture stiffness, and mental fatigue through anatomical mastery and warm organic botanical oils.
+            Targeting chronic physical tension, desk posture stiffness, and mental fatigue through anatomical mastery and warm organic botanical oils at Ziva Spa.
           </p>
         </div>
       </section>
@@ -70,7 +74,9 @@ export const MassageTherapyPage: React.FC = () => {
               <div className="relative h-56 sm:h-64 overflow-hidden bg-stone-100">
                 <img
                   src={service.image}
-                  alt={service.name}
+                  alt={`${service.name} Massage at Ziva Spa Karol Bagh New Delhi`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />

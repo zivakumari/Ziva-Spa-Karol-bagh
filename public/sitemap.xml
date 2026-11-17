@@ -2,172 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Sanctuary Pages -->
   <url>
-    <loc>https://zivaspa.in/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/massage-therapy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/massage-therapy</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/couple-spa</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/couple-spa</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/body-spa-treatments</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/body-spa-treatments</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/luxury-packages</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/luxury-packages</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/booking</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/booking</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/offers</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/offers</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/reviews</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/reviews</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/gallery</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/gallery</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/about</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/about</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/contact</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/contact</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/faq</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/faq</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/my-bookings</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://zivaspa.in/privacy-policy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/privacy-policy</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/terms-conditions</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/terms-conditions</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
-  <!-- Individual Service URLs for Local Search -->
+  <!-- Individual Service URLs for Karol Bagh Local Search -->
   <url>
-    <loc>https://zivaspa.in/services/swedish-relaxation</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/swedish-relaxation</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/deep-tissue-therapy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/deep-tissue-therapy</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/hot-stone-therapy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/hot-stone-therapy</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/balinese-aromatherapy</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/balinese-aromatherapy</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/potli-abhyanga</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/potli-abhyanga</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/foot-reflexology</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/foot-reflexology</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/turkish-hamam-scrub</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/turkish-hamam-scrub</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/himalayan-salt-glow</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/himalayan-salt-glow</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/detox-clay-wrap</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/detox-clay-wrap</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/couple-harmony-retreat</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/couple-harmony-retreat</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/couple-twilight-bliss</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/couple-twilight-bliss</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zivaspa.in/services/gold-radiance-facial</loc>
-    <lastmod>2026-11-10</lastmod>
+    <loc>https://zivaspa.online/services/gold-radiance-facial</loc>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

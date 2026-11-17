@@ -10,18 +10,24 @@ export const CoupleSpaPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Private Couple Spa Suites (Open 24/7) – Jacuzzi & Massages"
-        description="Open 24/7 in Karol Bagh, New Delhi. Book intimate private couple suites at Ziva Spa. Side-by-side synchronized massages, rose petal Jacuzzi, and Google Maps directions."
+        title="Private Couple Spa in Karol Bagh, New Delhi | Jacuzzi Suites – Ziva Spa"
+        description="Book romantic private couple spa suites in Karol Bagh at Ziva Spa. Side-by-side synchronized massages, rose petal Jacuzzi hydrotherapy, and candlelit ambiance."
         canonicalPath="/couple-spa"
-        keywords="couple spa New Delhi 24/7, couple massage Delhi, private jacuzzi spa Karol Bagh, late night couple spa, anniversary couple spa package Delhi"
+        keywords="couple spa in Karol Bagh, couple massage Karol Bagh, couple spa New Delhi, private jacuzzi spa Delhi, couple spa near Gaffar Market, Ziva Spa"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Couple Spa Suites', item: '/couple-spa' },
+        ]}
       />
       {/* Hero Banner */}
       <section className="relative py-24 bg-[#141211] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/couple_spa_suite_1794307113115.jpg"
-            alt="Private Couple Spa Suite"
+            alt="Private Couple Spa Suite with Jacuzzi at Ziva Spa Karol Bagh New Delhi"
             className="w-full h-full object-cover opacity-35"
+            loading="eager"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#141211] via-[#141211]/60 to-transparent" />
@@ -30,14 +36,14 @@ export const CoupleSpaPage: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C5A880]/40 text-xs tracking-[0.25em] text-[#DFCA9B] uppercase font-sans mb-4">
             <Heart className="w-3.5 h-3.5 fill-[#C5A880] text-[#C5A880]" />
-            <span>Private Sanctuary for Two · New Delhi</span>
+            <span>Private Sanctuary for Two · Karol Bagh</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-2 text-stone-100">
-            Couple Spa Retreats
+            Private Couple Spa in Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Rekindle connection in an intimate haven of warm candlelight, synchronized massage therapies, private rose petal Jacuzzi hydrotherapy, and artisanal refreshments.
+            Rekindle connection at Ziva Spa in an intimate haven of warm candlelight, synchronized massage therapies, private rose petal Jacuzzi hydrotherapy, and artisanal refreshments.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

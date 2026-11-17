@@ -14,9 +14,10 @@ export const HomePage: React.FC = () => {
   return (
     <div className="space-y-24 md:space-y-32 pb-24">
       <SEOHead
-        title="Ziva Spa – Open 24/7 | Luxury Wellness Sanctuary Karol Bagh New Delhi"
-        description="Ziva Spa is open 24/7 on Arya Samaj Road, Opposite Gaffar Market, Karol Bagh, New Delhi. Experience round-the-clock Swedish, Deep Tissue, Ayurvedic rituals, private couple suites, and instant directions."
+        title="Ziva Spa – Best Spa in Karol Bagh, New Delhi | Luxury Wellness Sanctuary"
+        description="Ziva Spa on Arya Samaj Road, Opposite Gaffar Market, Karol Bagh, New Delhi. Premier luxury spa offering Swedish, Deep Tissue, Ayurvedic body massages & private couple suites."
         canonicalPath="/"
+        keywords="Spa in Karol Bagh, Best Spa in Karol Bagh, Spa in Karol Bagh New Delhi, Massage in Karol Bagh, Spa Near Gaffar Market, Wellness Spa in Karol Bagh, Spa Near Arya Samaj Road, couple spa Delhi, body massage New Delhi"
       />
       {/* Hero Section */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#141211] text-white">
@@ -24,8 +25,11 @@ export const HomePage: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
-            alt="ZIVA SPA Luxury Wellness Sanctuary Interior"
+            alt="Ziva Spa - Luxury Spa in Karol Bagh New Delhi Sanctuary Interior"
             className="w-full h-full object-cover object-center scale-105 animate-in fade-in zoom-in-95 duration-1000 opacity-55"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#141211] via-[#141211]/50 to-transparent" />
@@ -46,11 +50,11 @@ export const HomePage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal tracking-tight text-[#FAF8F5] max-w-4xl leading-[1.15] text-balance">
-            Where Modern Chaos Yields to <span className="italic text-[#C5A880] font-light">Timeless Serenity</span>
+            Premier Luxury <span className="italic text-[#C5A880] font-light">Spa in Karol Bagh</span>, New Delhi
           </h1>
 
           <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 font-light max-w-2xl leading-relaxed text-balance">
-            Immerse in handcrafted restorative therapies, private couple jacuzzi suites, and pure organic botanicals. Open 24 hours daily on Arya Samaj Road, Karol Bagh, New Delhi.
+            Where modern chaos yields to timeless serenity. Discover the best spa in Karol Bagh, New Delhi with handcrafted massage therapies, private couple jacuzzi suites, and pure organic botanicals. Open 24/7 on Arya Samaj Road, opposite Gaffar Market.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-3.5 w-full sm:w-auto flex-wrap">
@@ -108,13 +112,13 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A88B63]">
-              The ZIVA Philosophy
+              The Ziva Spa Philosophy
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1917] leading-tight text-balance">
-              Restorative Sanctuary for Mind, Body & Spirit
+              Best Spa in Karol Bagh – Holistic Healing for Mind & Body
             </h2>
             <p className="text-stone-600 leading-relaxed text-sm sm:text-base">
-              Nestled on Arya Samaj Road opposite Gaffar Market in Karol Bagh, ZIVA SPA was founded on a simple truth: true wellness is not an indulgence, but a biological necessity. We blend time-honored eastern healing wisdom with refined European spa standards.
+              Nestled on Arya Samaj Road opposite Gaffar Market in Karol Bagh, Ziva Spa was founded on a simple truth: true wellness is not an indulgence, but a biological necessity. We blend time-honored eastern healing wisdom with refined European spa standards to create a tranquil sanctuary in Central Delhi.
             </p>
             <p className="text-stone-600 leading-relaxed text-sm">
               From our bespoke hand-tied Ayurvedic Potlis to heated volcanic basalt stones and private couple hydrotherapy suites, each ritual is tailored specifically to your body's stress pattern.
@@ -125,7 +129,7 @@ export const HomePage: React.FC = () => {
                 <div className="w-5 h-5 rounded-full bg-[#C5A880]/20 flex items-center justify-center text-[#A88B63]">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span>Certified therapists with certified musculoskeletal training</span>
+                <span>Certified therapists with verified musculoskeletal anatomy training</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-stone-800">
                 <div className="w-5 h-5 rounded-full bg-[#C5A880]/20 flex items-center justify-center text-[#A88B63]">
@@ -156,7 +160,9 @@ export const HomePage: React.FC = () => {
             <div className="rounded-2xl overflow-hidden shadow-md group">
               <img
                 src="/images/spa_interior_reception_1794307114314.jpg"
-                alt="ZIVA SPA Reception Lounge"
+                alt="Ziva Spa Reception Lounge on Arya Samaj Road Karol Bagh"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -169,7 +175,9 @@ export const HomePage: React.FC = () => {
             <div className="rounded-2xl overflow-hidden shadow-md group sm:translate-y-6">
               <img
                 src="/images/couple_spa_suite_1794307113115.jpg"
-                alt="Couple Treatment Suite"
+                alt="Private Couple Spa Suite with Jacuzzi at Ziva Spa Karol Bagh"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -190,10 +198,10 @@ export const HomePage: React.FC = () => {
               Curated Therapies
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1917] mt-2">
-              Signature Spa Services
+              Signature Massage & Spa in Karol Bagh
             </h2>
             <p className="text-stone-600 text-sm mt-2 max-w-xl">
-              Each therapy begins with our signature aromatic warm foot soak and custom herbal inhalation.
+              Looking for massage in Karol Bagh? Each therapy begins with our signature aromatic warm foot soak and custom herbal inhalation.
             </p>
           </div>
 
@@ -215,7 +223,9 @@ export const HomePage: React.FC = () => {
               <div className="relative h-60 overflow-hidden bg-stone-100">
                 <img
                   src={service.image}
-                  alt={service.name}
+                  alt={`${service.name} at Ziva Spa Karol Bagh New Delhi`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -292,10 +302,10 @@ export const HomePage: React.FC = () => {
                 Private Couples Sanctuary
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-stone-100 leading-tight">
-                Shared Bliss in Private Luxury Suites
+                Private Couple Spa in Karol Bagh – Shared Luxury Suites
               </h2>
               <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-                Step into an exclusive sanctuary designed for two. Complete with side-by-side plush massage tables, private hydrotherapy Jacuzzi filled with rose petals, delicate candlelight, and artisan chocolates.
+                Step into an exclusive sanctuary designed for two. Complete with side-by-side plush massage tables, private hydrotherapy Jacuzzi filled with rose petals, delicate candlelight, and artisan refreshments.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2 text-xs">
@@ -331,7 +341,9 @@ export const HomePage: React.FC = () => {
               <div className="rounded-3xl overflow-hidden border border-stone-800 shadow-2xl">
                 <img
                   src="/images/couple_spa_suite_1794307113115.jpg"
-                  alt="Couple Spa Suite at ZIVA SPA Karol Bagh New Delhi"
+                  alt="Private Couple Spa Suite with Jacuzzi at Ziva Spa Karol Bagh New Delhi"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[320px] sm:h-[400px] md:h-[460px] object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -451,10 +463,10 @@ export const HomePage: React.FC = () => {
             Location & Directions
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1917] mt-2">
-            Visit Our Karol Bagh Sanctuary
+            Visit Our Wellness Spa Near Gaffar Market, Karol Bagh
           </h2>
           <p className="text-stone-600 text-sm mt-2">
-            Located on Arya Samaj Road opposite Gaffar Market, Karol Bagh, New Delhi. Check real-time driving proximity and open instant GPS navigation.
+            Located at 3rd Floor, 10189/92, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA, Karol Bagh, New Delhi – 110005. Check real-time driving proximity and open instant GPS navigation.
           </p>
         </div>
 

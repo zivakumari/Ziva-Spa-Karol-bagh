@@ -26,10 +26,14 @@ export const GalleryPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Sanctuary Visual Gallery – Spa Interiors & Suites"
-        description="Step inside ZIVA SPA Karol Bagh, New Delhi. Explore our limestone architecture, private couple treatment suites, hydrotherapy pools, and serene lounges."
+        title="Ziva Spa Photos & Sanctuary Gallery | Karol Bagh, New Delhi"
+        description="View photos of Ziva Spa on Arya Samaj Road, Karol Bagh, New Delhi. Explore our luxury interiors, private couple jacuzzi suites, and serene treatment rooms."
         canonicalPath="/gallery"
-        keywords="Ziva Spa gallery, spa photos New Delhi, luxury couple suite photos, spa interior Karol Bagh"
+        keywords="Ziva Spa photos, spa in Karol Bagh images, luxury couple suite photos Delhi, spa interior Karol Bagh, massage rooms New Delhi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Gallery', item: '/gallery' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -38,7 +42,7 @@ export const GalleryPage: React.FC = () => {
             Visual Sanctuary Tour
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Sanctuary Gallery
+            Ziva Spa Photo Gallery – Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Step inside our Karol Bagh haven. Explore our warm limestone architecture, private couple jacuzzi suites, candle-lit therapy chambers, and organic herbal apothecary.
@@ -77,7 +81,9 @@ export const GalleryPage: React.FC = () => {
               <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden bg-stone-100">
                 <img
                   src={item.imageUrl}
-                  alt={item.title}
+                  alt={`${item.title} – Ziva Spa Karol Bagh New Delhi`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />

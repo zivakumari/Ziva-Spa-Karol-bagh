@@ -16,10 +16,14 @@ export const OffersPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Special Offers, Discount Codes & Spa Packages – ZIVA SPA"
-        description="Exclusive wellness discounts in Karol Bagh, New Delhi. 20% off with promo code ZIVA20, couple weekday savings, and corporate rates."
+        title="Spa Offers & Special Discounts in Karol Bagh | Ziva Spa Deals"
+        description="Exclusive wellness offers and promo codes at Ziva Spa Karol Bagh, New Delhi. Enjoy welcome discounts, weekday specials, and private couple spa packages."
         canonicalPath="/offers"
-        keywords="spa offers New Delhi, spa discounts Karol Bagh, Ziva Spa promo code, couple spa offer Delhi"
+        keywords="spa offers in Karol Bagh, spa discounts Karol Bagh, Ziva Spa promo code, couple spa offers Delhi, massage deals New Delhi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Special Offers', item: '/offers' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -28,10 +32,10 @@ export const OffersPage: React.FC = () => {
             Exclusive Privileges
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Special Offers & Packages
+            Spa Offers & Special Discounts – Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Discover limited-time wellness promotions, corporate rates, and celebratory couple privileges for your next visit to ZIVA SPA.
+            Discover limited-time wellness promotions, corporate rates, and celebratory couple privileges for your next visit to Ziva Spa.
           </p>
         </div>
       </section>

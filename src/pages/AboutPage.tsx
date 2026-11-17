@@ -8,10 +8,14 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="space-y-24 pb-24">
       <SEOHead
-        title="About ZIVA SPA – Philosophy, Master Therapists & Sanctuary Heritage"
-        description="Discover the story and standards of ZIVA SPA in Karol Bagh, New Delhi. Master musculoskeletal therapists, organic Kerala botanicals, and private couple suites."
+        title="About Ziva Spa – Luxury Wellness Sanctuary in Karol Bagh, New Delhi"
+        description="Learn about Ziva Spa in Karol Bagh, New Delhi. Certified anatomy therapists, pure organic botanicals from Kerala, private couple jacuzzi suites, and our wellness heritage."
         canonicalPath="/about"
-        keywords="about Ziva Spa, spa philosophy New Delhi, certified massage therapists Karol Bagh, luxury wellness New Delhi"
+        keywords="about Ziva Spa, spa in Karol Bagh, best spa in Karol Bagh, certified massage therapists Karol Bagh, luxury wellness New Delhi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'About Us', item: '/about' },
+        ]}
       />
       {/* Header Banner */}
       <section className="relative py-20 bg-[#1C1917] text-white overflow-hidden">
@@ -61,7 +65,9 @@ export const AboutPage: React.FC = () => {
             <div className="rounded-3xl overflow-hidden shadow-xl border border-stone-200">
               <img
                 src="/images/hero_luxury_spa_sanctuary_1794307111404.jpg"
-                alt="ZIVA SPA Relaxation Sanctuary"
+                alt="Ziva Spa Relaxation Sanctuary Interior in Karol Bagh New Delhi"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-[280px] sm:h-[380px] md:h-[450px] object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -143,7 +149,9 @@ export const AboutPage: React.FC = () => {
           <div className="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-xl border border-stone-200">
             <img
               src="/images/couple_spa_suite_1794307113115.jpg"
-              alt="ZIVA SPA Private Suite"
+              alt="Ziva Spa Private Couple Suite with Jacuzzi in Karol Bagh New Delhi"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[260px] sm:h-[350px] md:h-[420px] object-cover"
               referrerPolicy="no-referrer"
             />

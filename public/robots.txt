@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /my-bookings
 
 # Sitemaps
-Sitemap: https://zivaspa.in/sitemap.xml
+Sitemap: https://zivaspa.online/sitemap.xml

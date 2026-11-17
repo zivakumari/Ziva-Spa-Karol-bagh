@@ -8,9 +8,13 @@ export const TermsPage: React.FC = () => {
   return (
     <div className="space-y-12 pb-24">
       <SEOHead
-        title="Terms & Conditions – Arrival Etiquette & Policies"
-        description="Official sanctuary terms, cancellation policies, and etiquette guidelines for ZIVA SPA Karol Bagh, New Delhi."
+        title="Terms & Conditions | Ziva Spa Karol Bagh, New Delhi"
+        description="Official sanctuary policies, arrival etiquette, and appointment cancellation terms for Ziva Spa in Karol Bagh, New Delhi."
         canonicalPath="/terms-conditions"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Terms & Conditions', item: '/terms-conditions' },
+        ]}
       />
       <section className="py-12 sm:py-16 bg-[#1C1917] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-8">

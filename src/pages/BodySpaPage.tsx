@@ -10,10 +10,14 @@ export const BodySpaPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Body Spa Treatments – Turkish Hamam, Himalayan Salt & Algae Wraps"
-        description="Renew dull skin and detoxify with whole-body scrubs and thermal cocoon wraps at ZIVA SPA Karol Bagh, New Delhi. Kessa mitt exfoliation & organic floral hydrations."
+        title="Body Spa Treatments in Karol Bagh, New Delhi | Ziva Spa Scrubs"
+        description="Rejuvenate with royal Turkish Hamam polishes, Himalayan salt scrubs, and volcanic clay detox wraps at Ziva Spa, Karol Bagh, New Delhi."
         canonicalPath="/body-spa-treatments"
-        keywords="body spa New Delhi, Turkish Hamam Delhi, body polish Karol Bagh, Himalayan salt scrub New Delhi"
+        keywords="body spa in Karol Bagh, body scrub Karol Bagh, Turkish Hamam Delhi, Himalayan salt scrub New Delhi, wellness spa Karol Bagh, Ziva Spa"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Body Spa Treatments', item: '/body-spa-treatments' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -22,10 +26,10 @@ export const BodySpaPage: React.FC = () => {
             Skin Radiance & Detoxification
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Body Spa Treatments & Scrubs
+            Body Spa Treatments in Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Exquisite body polishes, mineral cocoon wraps, and authentic Turkish Hamam rituals utilizing Himalayan crystal salts and pure rose essences.
+            Exquisite body polishes, mineral cocoon wraps, and authentic Turkish Hamam rituals utilizing Himalayan crystal salts and pure rose essences at Ziva Spa.
           </p>
         </div>
       </section>
@@ -36,7 +40,9 @@ export const BodySpaPage: React.FC = () => {
           <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-md">
             <img
               src="/images/body_treatment_herbal_scrub_1794307112654.jpg"
-              alt="Body Scrub & Herbal Preparations"
+              alt="Body Scrub & Herbal Preparations at Ziva Spa Karol Bagh New Delhi"
+              loading="lazy"
+              decoding="async"
               className="w-full h-[260px] sm:h-[350px] md:h-[420px] object-cover"
               referrerPolicy="no-referrer"
             />
@@ -96,7 +102,9 @@ export const BodySpaPage: React.FC = () => {
               <div className="relative h-56 sm:h-64 overflow-hidden bg-stone-100">
                 <img
                   src={service.image}
-                  alt={service.name}
+                  alt={`${service.name} at Ziva Spa Karol Bagh New Delhi`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />

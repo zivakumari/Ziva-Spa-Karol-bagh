@@ -48,10 +48,14 @@ export const ReviewsPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Verified Guest Reviews & Ratings (4.9★) | Ziva Spa – Open 24/7"
-        description="Read authentic guest reviews and ratings for Ziva Spa (Open 24/7) in Karol Bagh, New Delhi. Rated 4.9/5 stars for deep tissue massages, private couple suites, and round-the-clock service."
+        title="Customer Reviews & Testimonials | Ziva Spa Karol Bagh, New Delhi"
+        description="Read guest reviews and experiences for Ziva Spa in Karol Bagh, New Delhi. Discover feedback on our therapeutic massages, couple suites, and wellness rituals."
         canonicalPath="/reviews"
-        keywords="Ziva Spa reviews, best spa in Delhi reviews, 24/7 spa New Delhi reviews, spa rating Karol Bagh, customer testimonials"
+        keywords="Ziva Spa reviews, spa in Karol Bagh reviews, best spa in Karol Bagh feedback, customer testimonials, couple spa reviews Delhi"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Reviews', item: '/reviews' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -60,7 +64,7 @@ export const ReviewsPage: React.FC = () => {
             Guest Testimonials
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Reviews & Testimonials
+            Guest Reviews & Experiences – Ziva Spa Karol Bagh
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Real feedback from our valued guests. Every review reflects authentic experiences at our Karol Bagh sanctuary.

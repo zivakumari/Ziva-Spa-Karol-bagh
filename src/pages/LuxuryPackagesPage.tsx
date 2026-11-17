@@ -8,10 +8,14 @@ export const LuxuryPackagesPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Luxury Spa Packages – Full Day Rebirth, Executive Detox & Bridal"
-        description="Comprehensive half-day and full-day wellness packages at ZIVA SPA Karol Bagh, New Delhi. Rejuvenate with bundled massages, body polishes, and 24K gold facials."
+        title="Luxury Spa Packages in Karol Bagh, New Delhi | Ziva Spa Journeys"
+        description="Indulge in half-day and full-day wellness packages at Ziva Spa Karol Bagh. Rebirth rituals, executive stress recovery, and royal bridal radiance journeys."
         canonicalPath="/luxury-packages"
-        keywords="luxury spa packages New Delhi, full day spa Delhi, bridal spa package Karol Bagh, executive stress relief spa Delhi"
+        keywords="luxury spa packages New Delhi, spa packages in Karol Bagh, full day spa Karol Bagh, bridal spa package New Delhi, executive spa Delhi, Ziva Spa"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Luxury Packages', item: '/luxury-packages' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -20,10 +24,10 @@ export const LuxuryPackagesPage: React.FC = () => {
             Comprehensive Immersion
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Luxury Spa Packages
+            Luxury Spa Packages in Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Curated half-day and full-day multi-treatment journeys designed for profound cellular restoration, bridal radiance, and executive stress recovery.
+            Curated half-day and full-day multi-treatment journeys designed for profound cellular restoration, bridal radiance, and executive stress recovery at Ziva Spa.
           </p>
         </div>
       </section>
@@ -42,7 +46,9 @@ export const LuxuryPackagesPage: React.FC = () => {
                 <div className="relative h-64 overflow-hidden bg-stone-100">
                   <img
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={`${pkg.name} Luxury Spa Package at Ziva Spa Karol Bagh New Delhi`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />

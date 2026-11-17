@@ -35,10 +35,10 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="space-y-20 pb-24">
       <SEOHead
-        title="Contact Ziva Spa – Open 24/7 | Address, Google Maps Directions & Helpline"
-        description="Visit Ziva Spa (Open 24/7) at 2nd Floor, 10189/92, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA, Karol Bagh, New Delhi, Delhi – 110005. 24-hour phone concierge, WhatsApp chat, and GPS Google Maps directions."
+        title="Contact Ziva Spa Karol Bagh | Address, Phone & Directions – New Delhi"
+        description="Visit Ziva Spa at 3rd Floor, 10189/92, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA, Karol Bagh, New Delhi – 110005. Phone: +91 9661207931, WhatsApp chat, and Google Maps GPS directions."
         canonicalPath="/contact"
-        keywords="contact Ziva Spa, 24/7 spa New Delhi contact, spa address Karol Bagh New Delhi, spa near Gaffar Market phone number, directions to Ziva Spa"
+        keywords="contact Ziva Spa, spa address Karol Bagh New Delhi, spa near Gaffar Market phone number, spa near Arya Samaj Road, directions to Ziva Spa Karol Bagh"
       />
       {/* Header Banner */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">

@@ -29,10 +29,14 @@ export const ServicesPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Spa & Massage Menu (Open 24/7) – Pricing, Duration & Treatments"
-        description="Open 24/7 in Karol Bagh, New Delhi. Browse luxury wellness therapies at Ziva Spa: Swedish, Deep Tissue, Hot Stone, Balinese, Turkish Hamam scrubs, and couple spa suites with online booking."
+        title="Spa Services in Karol Bagh, New Delhi | Ziva Spa Menu & Pricing"
+        description="Browse luxury spa and massage services in Karol Bagh at Ziva Spa. Swedish, Deep Tissue, Hot Stone, Balinese, Turkish Hamam scrubs & private couple suites."
         canonicalPath="/services"
-        keywords="spa menu New Delhi 24/7, 24 hour massage price Delhi, spa near Gaffar Market, body scrub Karol Bagh, couple spa New Delhi"
+        keywords="spa services in Karol Bagh, massage in Karol Bagh, spa menu New Delhi, body scrub Karol Bagh, couple spa New Delhi, best spa in Karol Bagh"
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Services Menu', item: '/services' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-20 bg-[#1C1917] text-white text-center">
@@ -41,10 +45,10 @@ export const ServicesPage: React.FC = () => {
             The Treatment Catalogue
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Our Spa & Wellness Menu
+            Spa Services in Karol Bagh, New Delhi
           </h1>
           <p className="mt-4 text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            From deep anatomical bodywork to ancient Ayurvedic potlis and royal couple retreats, explore our curated holistic rituals.
+            From deep anatomical bodywork to ancient Ayurvedic potlis and royal couple retreats, explore our curated holistic rituals at Ziva Spa.
           </p>
         </div>
       </section>
@@ -109,7 +113,9 @@ export const ServicesPage: React.FC = () => {
                 <div className="relative h-64 overflow-hidden bg-stone-100">
                   <img
                     src={service.image}
-                    alt={service.name}
+                    alt={`${service.name} at Ziva Spa Karol Bagh New Delhi`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />

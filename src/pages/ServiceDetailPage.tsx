@@ -14,38 +14,68 @@ export const ServiceDetailPage: React.FC = () => {
 
   const serviceStructuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: service.name,
-    name: service.name,
-    description: service.fullDesc,
-    provider: {
-      '@type': 'DaySpa',
-      name: BUSINESS_INFO.name,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: BUSINESS_INFO.street,
-        addressLocality: BUSINESS_INFO.city,
-        postalCode: BUSINESS_INFO.pincode,
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `https://zivaspa.online/services/${service.id}#service`,
+        serviceType: service.name,
+        name: `${service.name} in Karol Bagh, New Delhi`,
+        description: service.fullDesc,
+        image: `https://zivaspa.online${service.image}`,
+        provider: {
+          '@type': ['DaySpa', 'LocalBusiness'],
+          '@id': 'https://zivaspa.online/#localbusiness',
+          name: BUSINESS_INFO.name,
+          url: 'https://zivaspa.online/',
+          telephone: '+919661207931',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '3rd Floor, 10189/92, Arya Samaj Road, Opposite Gaffar Market, Block 14, WEA',
+            addressLocality: 'Karol Bagh',
+            addressRegion: 'Delhi',
+            postalCode: '110005',
+            addressCountry: 'IN',
+          },
+        },
+        areaServed: [
+          { '@type': 'AdministrativeArea', name: 'Karol Bagh' },
+          { '@type': 'AdministrativeArea', name: 'New Delhi' },
+        ],
+        offers: {
+          '@type': 'Offer',
+          price: service.priceINR.toString(),
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+          validFrom: '2026-01-01',
+          url: `https://zivaspa.online/services/${service.id}`,
+        },
       },
-    },
-    offers: {
-      '@type': 'Offer',
-      price: service.priceINR.toString(),
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-01-01',
-    },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://zivaspa.online/services/${service.id}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zivaspa.online/' },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://zivaspa.online/services' },
+          { '@type': 'ListItem', position: 3, name: service.name, item: `https://zivaspa.online/services/${service.id}` },
+        ],
+      },
+    ],
   };
 
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title={`${service.name} (${service.durationMinutes} Min) | ZIVA SPA New Delhi`}
-        description={`${service.shortDesc} Experience this therapeutic ritual at ZIVA SPA, Karol Bagh, New Delhi. Tariff: ₹${service.priceINR}. Book online.`}
-        keywords={`${service.name}, ${service.category} spa New Delhi, massage Karol Bagh, spa near Gaffar Market, Ziva Spa`}
+        title={`${service.name} in Karol Bagh, New Delhi | Ziva Spa`}
+        description={`${service.shortDesc} Book ${service.name} (${service.durationMinutes} mins, ₹${service.priceINR}) at Ziva Spa on Arya Samaj Road, Opposite Gaffar Market, Karol Bagh, New Delhi.`}
+        keywords={`${service.name}, ${service.name} Karol Bagh, massage in Karol Bagh, spa in Karol Bagh New Delhi, spa near Gaffar Market, Ziva Spa`}
         canonicalPath={`/services/${service.id}`}
         ogImage={service.image}
         structuredData={serviceStructuredData}
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'Services', item: '/services' },
+          { name: service.name, item: `/services/${service.id}` },
+        ]}
       />
       {/* Breadcrumb & Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8">
@@ -70,7 +100,9 @@ export const ServiceDetailPage: React.FC = () => {
             <div className="rounded-3xl overflow-hidden shadow-md border border-stone-200/80 bg-stone-100">
               <img
                 src={service.image}
-                alt={service.name}
+                alt={`${service.name} Therapy at Ziva Spa Karol Bagh New Delhi`}
+                loading="eager"
+                decoding="async"
                 className="w-full h-[260px] sm:h-[380px] md:h-[460px] object-cover"
                 referrerPolicy="no-referrer"
               />

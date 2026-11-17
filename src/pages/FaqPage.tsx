@@ -11,15 +11,28 @@ export const FaqPage: React.FC = () => {
 
   const faqStructuredData = {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
+    '@graph': [
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://zivaspa.online/faq#faq',
+        mainEntity: FAQS.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
-    })),
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://zivaspa.online/faq#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zivaspa.online/' },
+          { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://zivaspa.online/faq' },
+        ],
+      },
+    ],
   };
 
   const categories = [
@@ -46,11 +59,15 @@ export const FaqPage: React.FC = () => {
   return (
     <div className="space-y-16 pb-24">
       <SEOHead
-        title="Frequently Asked Questions – Spa Etiquette, Bookings & Parking"
-        description="Find answers regarding appointments, arrival etiquette, valet parking on Arya Samaj Road, cancellation policies, and accepted payment methods at ZIVA SPA Karol Bagh, New Delhi."
+        title="Ziva Spa FAQ – Location, Bookings & Services | Karol Bagh New Delhi"
+        description="Frequently asked questions about Ziva Spa in Karol Bagh, New Delhi. Details on 24/7 hours, appointments, parking on Arya Samaj Road, and massage etiquette."
         canonicalPath="/faq"
-        keywords="spa faq New Delhi, spa etiquette, Karol Bagh spa parking, Ziva Spa questions"
+        keywords="Ziva Spa FAQ, spa in Karol Bagh questions, Karol Bagh spa parking, spa etiquette New Delhi, 24/7 spa booking Delhi"
         structuredData={faqStructuredData}
+        breadcrumbs={[
+          { name: 'Home', item: '/' },
+          { name: 'FAQ', item: '/faq' },
+        ]}
       />
       {/* Header Banner */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#1C1917] text-white text-center">
@@ -59,7 +76,7 @@ export const FaqPage: React.FC = () => {
             Help & Guidance
           </span>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mt-3 text-stone-100">
-            Frequently Asked Questions
+            Frequently Asked Questions – Ziva Spa Karol Bagh
           </h1>
           <p className="mt-3 sm:mt-4 text-stone-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about preparing for your session, etiquette, parking on Arya Samaj Road, and our customized therapies.
